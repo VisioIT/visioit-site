@@ -59,15 +59,9 @@ jobs:
             set net:timeout 20;
             set ftp:passive-mode true;
             set ftp:ssl-allow true;
-            # KingHost's FTP TLS certificate is not chained to a public CA.
-            # Keep TLS enabled while allowing that hosting certificate.
+            # Keep the credentials encrypted while accepting KingHost's private CA.
             set ssl:verify-certificate no;
-            debug 2;
-            pwd;
-            cls -la;
-            # This KingHost FTP user opens directly in the site's public directory
-            # and the server does not expose absolute remote paths.
-            mirror --reverse --parallel=1 --verbose=1 dist/client/ .;
+            mirror --reverse --parallel=1 --verbose=1 dist/client/ www/;
             bye
           "
 
