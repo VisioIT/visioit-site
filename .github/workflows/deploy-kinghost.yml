@@ -64,7 +64,7 @@ jobs:
             set ssl:verify-certificate no;
             # This KingHost FTP user opens directly in the site's public directory
             # and the server does not expose absolute remote paths.
-            mirror --reverse --parallel=4 --verbose=1 dist/client/ .;
+            mirror --reverse --parallel=1 --verbose=1 dist/client/ .;
             bye
           "
 
