@@ -86,7 +86,7 @@
     ]
   },
   "components/ui/client-logo-carousel.tsx": {
-    "file": "_next/static/chunks/client-logo-carousel-CBmSKYx5.js",
+    "file": "_next/static/chunks/client-logo-carousel-C5eXyNqi.js",
     "name": "client-logo-carousel",
     "src": "components/ui/client-logo-carousel.tsx",
     "isDynamicEntry": true,
@@ -98,7 +98,7 @@
     ]
   },
   "components/ui/motion-footer.tsx": {
-    "file": "_next/static/chunks/motion-footer-CpoZRQTU.js",
+    "file": "_next/static/chunks/motion-footer-COLwzkYY.js",
     "name": "motion-footer",
     "src": "components/ui/motion-footer.tsx",
     "isDynamicEntry": true,
@@ -110,7 +110,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js": {
-    "file": "_next/static/chunks/image-CxYMdatV.js",
+    "file": "_next/static/chunks/image-CPa5FeHW.js",
     "name": "image",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
     "isDynamicEntry": true,
@@ -121,7 +121,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "_next/static/chunks/layout-segment-context-B2J9y_Nn.js",
+    "file": "_next/static/chunks/layout-segment-context-BgtxVY1c.js",
     "name": "layout-segment-context",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -132,7 +132,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "_next/static/chunks/index-DGDLQMfB.js",
+    "file": "_next/static/chunks/index-xuELnA5m.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
