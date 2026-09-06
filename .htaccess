@@ -1,0 +1,7 @@
+<IfModule pagespeed_module>
+  ModPagespeed off
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Cache-Control "no-transform"
+</IfModule>
