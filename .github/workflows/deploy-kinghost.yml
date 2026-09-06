@@ -61,5 +61,5 @@ jobs:
           git clean -fdx
           cp -R "$PUBLIC_DIR"/. .
           git add --all
-          git commit -m "Publicação ${GITHUB_SHA::7}" || exit 0
+          git commit --allow-empty -m "Publicação ${GITHUB_SHA::7}"
           git push origin master
