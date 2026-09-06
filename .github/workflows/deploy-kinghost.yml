@@ -56,6 +56,9 @@ jobs:
             git switch --orphan master
           fi
           git rm -rf . || true
+          # The build installs dependencies as untracked files. Clear the
+          # ephemeral runner before copying only the public static output.
+          git clean -fdx
           cp -R "$PUBLIC_DIR"/. .
           git add --all
           git commit -m "Publicação ${GITHUB_SHA::7}" || exit 0
