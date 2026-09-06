@@ -62,7 +62,8 @@ jobs:
             # KingHost's FTP TLS certificate is not chained to a public CA.
             # Keep TLS enabled while allowing that hosting certificate.
             set ssl:verify-certificate no;
-            mirror --reverse --parallel=4 --verbose=1 dist/client/ /www/;
+            # This KingHost FTP user is already jailed to the site's public directory.
+            mirror --reverse --parallel=4 --verbose=1 dist/client/ /;
             bye
           "
 
