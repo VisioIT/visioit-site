@@ -17,8 +17,6 @@ jobs:
   build-and-publish:
     name: Gerar site estático
     runs-on: ubuntu-latest
-    env:
-      FTP_CONFIGURED: ${{ secrets.KINGHOST_FTP_HOST != '' && secrets.KINGHOST_FTP_USER != '' && secrets.KINGHOST_FTP_PASSWORD != '' }}
 
     steps:
       - name: Baixar o projeto
@@ -39,31 +37,6 @@ jobs:
 
       - name: Gerar o site
         run: pnpm build
-
-      - name: Instalar cliente FTP
-        if: ${{ env.FTP_CONFIGURED == 'true' }}
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq lftp
-
-      - name: Enviar para a KingHost por FTP
-        if: ${{ env.FTP_CONFIGURED == 'true' }}
-        env:
-          FTP_HOST: ${{ secrets.KINGHOST_FTP_HOST }}
-          FTP_USER: ${{ secrets.KINGHOST_FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.KINGHOST_FTP_PASSWORD }}
-          FTP_PORT: ${{ secrets.KINGHOST_FTP_PORT }}
-        run: |
-          lftp -u "$FTP_USER,$FTP_PASSWORD" -p "${FTP_PORT:-21}" "$FTP_HOST" -e "
-            set net:max-retries 3;
-            set net:timeout 20;
-            set ftp:passive-mode false;
-            set ftp:ssl-allow true;
-            # Keep the credentials encrypted while accepting KingHost's private CA.
-            set ssl:verify-certificate no;
-            mirror --reverse --parallel=1 --verbose=1 dist/client/ .;
-            bye
-          "
 
       - name: Preparar os arquivos públicos
         run: |
