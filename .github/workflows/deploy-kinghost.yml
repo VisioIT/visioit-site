@@ -57,11 +57,11 @@ jobs:
           lftp -u "$FTP_USER,$FTP_PASSWORD" -p "${FTP_PORT:-21}" "$FTP_HOST" -e "
             set net:max-retries 3;
             set net:timeout 20;
-            set ftp:passive-mode true;
+            set ftp:passive-mode false;
             set ftp:ssl-allow true;
             # Keep the credentials encrypted while accepting KingHost's private CA.
             set ssl:verify-certificate no;
-            mirror --reverse --parallel=1 --verbose=1 dist/client/ www/;
+            mirror --reverse --parallel=1 --verbose=1 dist/client/ .;
             bye
           "
 
