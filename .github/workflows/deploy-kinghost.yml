@@ -59,6 +59,9 @@ jobs:
             set net:timeout 20;
             set ftp:passive-mode true;
             set ftp:ssl-allow true;
+            # KingHost's FTP TLS certificate is not chained to a public CA.
+            # Keep TLS enabled while allowing that hosting certificate.
+            set ssl:verify-certificate no;
             mirror --reverse --parallel=4 --verbose=1 dist/client/ /www/;
             bye
           "
