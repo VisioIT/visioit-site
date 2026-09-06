@@ -1,0 +1,62 @@
+name: Publicar na KingHost
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kinghost-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    name: Gerar site estático
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+
+      - name: Preparar o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Preparar o pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.19.0 --activate
+
+      - name: Instalar dependências
+        run: pnpm install --frozen-lockfile
+
+      - name: Gerar o site
+        run: pnpm build
+
+      - name: Preparar os arquivos públicos
+        run: |
+          mkdir -p "$RUNNER_TEMP/visioit-public"
+          cp -R dist/client/. "$RUNNER_TEMP/visioit-public/"
+
+      - name: Publicar na branch master
+        env:
+          PUBLIC_DIR: ${{ runner.temp }}/visioit-public
+        run: |
+          git config user.name "Visio IT Deploy"
+          git config user.email "deploy@visioit.com.br"
+          git fetch origin master || true
+          if git show-ref --verify --quiet refs/remotes/origin/master; then
+            git switch --create master --track origin/master
+          else
+            git switch --orphan master
+          fi
+          git rm -rf . || true
+          cp -R "$PUBLIC_DIR"/. .
+          git add --all
+          git commit -m "Publicação ${GITHUB_SHA::7}" || exit 0
+          git push origin master
