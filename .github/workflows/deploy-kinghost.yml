@@ -17,6 +17,9 @@ jobs:
   build-and-publish:
     name: Gerar site estático
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
 
     steps:
       - name: Baixar o projeto
@@ -65,7 +68,7 @@ jobs:
           git push origin master
 
       - name: Aguardar sincronização da KingHost
-        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ZONE_ID != '' }}
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ZONE_ID != '' }}
         env:
           EXPECTED_INDEX: ${{ runner.temp }}/visioit-public/index.html
         run: |
@@ -87,7 +90,7 @@ jobs:
           exit 1
 
       - name: Limpar cache da Cloudflare
-        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ZONE_ID != '' }}
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ZONE_ID != '' }}
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
