@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: 'Visio IT | Sua empresa em movimento',
   description: 'Infraestrutura, segurança, sistemas, aplicativos, sites e hospedagem conectados à operação da sua empresa.',
   themeColor: '#f2f5f6',
+  icons: {
+    icon: [{ url: '/visioit-icon.png', type: 'image/png', sizes: '512x512' }],
+    apple: [{ url: '/visioit-icon.png', type: 'image/png', sizes: '512x512' }],
+  },
 };
 
 export default function RootLayout({
