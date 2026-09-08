@@ -8,12 +8,6 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export function GsapEffects() {
   useGSAP(() => {
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) {
-      gsap.set('[data-reveal]', { clearProps: 'all' });
-      return;
-    }
-
     ScrollTrigger.config({ limitCallbacks: true });
 
     gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((element) => {

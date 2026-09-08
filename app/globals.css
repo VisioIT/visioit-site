@@ -340,16 +340,6 @@ img { display:block; max-width:100%; }
   .services-switcher { min-height:auto; }
   .services-switcher-sticky { height:auto; min-height:0; position:relative; }
   .client-track,.world-scroll-hint i::after,.motion-footer-aurora,.floating-whatsapp { animation:none; }
-  .scroll-world { height:auto; }
-  .journey-stage { height:auto; position:relative; overflow:visible; }
-  .journey-canvas,.journey-video-wrap,.journey-progress,.journey-route { display:none; }
-  .journey-copy-layer { position:relative; }
-  .journey-copy { width:100%; min-height:100svh; padding:120px max(18px,5vw) 70px; position:relative; left:auto; right:auto; bottom:auto; top:auto; display:flex; flex-direction:column; justify-content:flex-end; transform:none!important; opacity:1!important; visibility:visible!important; overflow:hidden; background:#07131f; }
-  .journey-copy::before { content:''; position:absolute; inset:0; z-index:-2; background:center/cover no-repeat; filter:saturate(.65) brightness(.48); }
-  .journey-copy::after { content:''; position:absolute; inset:0; z-index:-1; background:linear-gradient(0deg,#07131f 3%,rgb(7 19 31/.86) 34%,rgb(7 19 31/.28) 70%,rgb(7 19 31/.18)); }
-  .journey-copy:nth-child(1)::before { background-image:url('/visioit-hero-datacenter.png'); }
-  .journey-copy:nth-child(2)::before { background-image:url('/visioit-hero-datacenter.png'); }
-  .journey-copy:nth-child(3)::before,.journey-copy:nth-child(4)::before { background-image:url('/visioit-wireless-field.png'); }
 }
 
 @media (max-width:900px) {

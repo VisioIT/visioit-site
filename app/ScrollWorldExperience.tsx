@@ -28,24 +28,21 @@ export function ScrollWorldExperience({ whatsapp }: { whatsapp: string }) {
     let cancelled = false;
     let frame = 0;
     const mobile = window.matchMedia('(max-width: 760px)').matches;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let initialFrameSynced = false;
 
-    if (!reduced) {
-      fetch('/visioit-scroll-world.mp4')
-        .then(response => response.ok ? response.blob() : Promise.reject(new Error('Falha ao carregar vídeo')))
-        .then(blob => {
-          if (cancelled) return;
-          objectUrl = URL.createObjectURL(blob);
-          element.src = objectUrl;
-          element.load();
-        })
-        .catch(() => {
-          if (cancelled) return;
-          element.src = '/visioit-scroll-world.mp4';
-          element.load();
-        });
-    }
+    fetch('/visioit-scroll-world.mp4')
+      .then(response => response.ok ? response.blob() : Promise.reject(new Error('Falha ao carregar vídeo')))
+      .then(blob => {
+        if (cancelled) return;
+        objectUrl = URL.createObjectURL(blob);
+        element.src = objectUrl;
+        element.load();
+      })
+      .catch(() => {
+        if (cancelled) return;
+        element.src = '/visioit-scroll-world.mp4';
+        element.load();
+      });
 
     let running = false;
     let lastSeekAt = 0;
@@ -74,7 +71,7 @@ export function ScrollWorldExperience({ whatsapp }: { whatsapp: string }) {
     };
 
     requestVideoFrame.current = () => {
-      if (reduced || running) return;
+      if (running) return;
       if (!initialFrameSynced && Number.isFinite(element.duration) && element.duration > 0) {
         currentProgress.current = targetProgress.current;
         element.currentTime = Math.min(element.duration * .998, targetProgress.current * element.duration);
@@ -100,7 +97,9 @@ export function ScrollWorldExperience({ whatsapp }: { whatsapp: string }) {
     if (!section) return;
     const mm = gsap.matchMedia();
 
-    mm.add('(prefers-reduced-motion: no-preference)', () => {
+    // Remote desktop sessions can report reduced motion even when the visitor
+    // expects the full cinematic presentation. Keep the main journey active.
+    mm.add('(min-width: 0px)', () => {
       const copies = gsap.utils.toArray<HTMLElement>('.journey-copy', section);
       gsap.set(copies.slice(1), { autoAlpha: 0, y: 34 });
       gsap.set(copies[0], { autoAlpha: 1, y: 0 });
