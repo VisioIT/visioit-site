@@ -5,11 +5,11 @@ header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store, max-age=0');
 header('X-Content-Type-Options: nosniff');
 
-function respond(int $status, bool $success, string $message): void
+function respond(int $status, bool $success, string $message, array $extra = []): void
 {
     http_response_code($status);
     echo json_encode(
-        ['success' => $success, 'message' => $message],
+        array_merge(['success' => $success, 'message' => $message], $extra),
         JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
     );
     exit;
@@ -22,6 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin !== '' && !in_array($origin, ['https://visioit.com.br', 'https://www.visioit.com.br'], true)) {
     respond(403, false, 'Origem não autorizada.');
+}
+
+if (($_COOKIE['visioit_contact_sent'] ?? '') === '1') {
+    respond(429, false, 'Uma mensagem já foi enviada por este navegador.', ['blocked' => true]);
 }
 
 // Bots costumam preencher campos visualmente ocultos. Para eles, simulamos
@@ -79,5 +83,21 @@ $headers = implode("\r\n", [
 if (!mail($to, $encodedSubject, $body, $headers, '-f' . $from)) {
     respond(500, false, 'Não foi possível enviar a mensagem.');
 }
+
+$cookieLifetime = time() + (60 * 60 * 24 * 30);
+setcookie('visioit_contact_sent', '1', [
+    'expires' => $cookieLifetime,
+    'path' => '/',
+    'secure' => true,
+    'httponly' => true,
+    'samesite' => 'Lax',
+]);
+setcookie('visioit_contact_status', 'sent', [
+    'expires' => $cookieLifetime,
+    'path' => '/',
+    'secure' => true,
+    'httponly' => false,
+    'samesite' => 'Lax',
+]);
 
 respond(200, true, 'Mensagem enviada com sucesso.');

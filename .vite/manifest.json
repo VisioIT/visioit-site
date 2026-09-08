@@ -1,6 +1,6 @@
 {
-  "_ScrollTrigger-twpqyZBY.js": {
-    "file": "_next/static/chunks/ScrollTrigger-twpqyZBY.js",
+  "_ScrollTrigger-DFa-6oAs.js": {
+    "file": "_next/static/chunks/ScrollTrigger-DFa-6oAs.js",
     "name": "ScrollTrigger"
   },
   "_framework-BgSIrAUN.js": {
@@ -10,8 +10,8 @@
       "_rolldown-runtime-C60lm6uB.js"
     ]
   },
-  "_react-CwqA749Q.js": {
-    "file": "_next/static/chunks/react-CwqA749Q.js",
+  "_react-DsYJ8X5F.js": {
+    "file": "_next/static/chunks/react-DsYJ8X5F.js",
     "name": "react",
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
@@ -22,27 +22,37 @@
     "file": "_next/static/chunks/rolldown-runtime-C60lm6uB.js",
     "name": "rolldown-runtime"
   },
-  "_src-DYLOcUnq.js": {
-    "file": "_next/static/chunks/src-DYLOcUnq.js",
+  "_src-BOvQCEog.js": {
+    "file": "_next/static/chunks/src-BOvQCEog.js",
     "name": "src",
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
-      "_ScrollTrigger-twpqyZBY.js",
+      "_ScrollTrigger-DFa-6oAs.js",
+      "_framework-BgSIrAUN.js"
+    ]
+  },
+  "_use-reduced-motion-E7GXNl6B.js": {
+    "file": "_next/static/chunks/use-reduced-motion-E7GXNl6B.js",
+    "name": "use-reduced-motion",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_react-DsYJ8X5F.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "app/ContactForm.tsx": {
-    "file": "_next/static/chunks/ContactForm-DBFkBNrm.js",
+    "file": "_next/static/chunks/ContactForm-BXI4oEJ1.js",
     "name": "ContactForm",
     "src": "app/ContactForm.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
+      "_react-DsYJ8X5F.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "app/FloatingWhatsApp.tsx": {
-    "file": "_next/static/chunks/FloatingWhatsApp-BLvcwctx.js",
+    "file": "_next/static/chunks/FloatingWhatsApp-D2XKAcj3.js",
     "name": "FloatingWhatsApp",
     "src": "app/FloatingWhatsApp.tsx",
     "isDynamicEntry": true,
@@ -52,65 +62,67 @@
     ]
   },
   "app/GsapEffects.tsx": {
-    "file": "_next/static/chunks/GsapEffects-Dt0i1HjE.js",
+    "file": "_next/static/chunks/GsapEffects-NXGAFjHg.js",
     "name": "GsapEffects",
     "src": "app/GsapEffects.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_src-DYLOcUnq.js",
-      "_ScrollTrigger-twpqyZBY.js"
+      "_src-BOvQCEog.js",
+      "_ScrollTrigger-DFa-6oAs.js"
     ]
   },
   "app/ScrollWorldExperience.tsx": {
-    "file": "_next/static/chunks/ScrollWorldExperience-DKTEmePA.js",
+    "file": "_next/static/chunks/ScrollWorldExperience-C4S2lMf3.js",
     "name": "ScrollWorldExperience",
     "src": "app/ScrollWorldExperience.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
-      "_src-DYLOcUnq.js",
-      "_ScrollTrigger-twpqyZBY.js",
+      "_src-BOvQCEog.js",
+      "_ScrollTrigger-DFa-6oAs.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "app/ServicesExperience.tsx": {
-    "file": "_next/static/chunks/ServicesExperience-DlCa5vWG.js",
+    "file": "_next/static/chunks/ServicesExperience-ChmqV2Jt.js",
     "name": "ServicesExperience",
     "src": "app/ServicesExperience.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
-      "_react-CwqA749Q.js",
-      "_ScrollTrigger-twpqyZBY.js",
+      "_react-DsYJ8X5F.js",
+      "_use-reduced-motion-E7GXNl6B.js",
+      "_ScrollTrigger-DFa-6oAs.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "components/ui/client-logo-carousel.tsx": {
-    "file": "_next/static/chunks/client-logo-carousel-RXCRwHij.js",
+    "file": "_next/static/chunks/client-logo-carousel-Dtm5S40M.js",
     "name": "client-logo-carousel",
     "src": "components/ui/client-logo-carousel.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
       "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
-      "_react-CwqA749Q.js",
+      "_react-DsYJ8X5F.js",
+      "_use-reduced-motion-E7GXNl6B.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "components/ui/motion-footer.tsx": {
-    "file": "_next/static/chunks/motion-footer-9E9LnTyi.js",
+    "file": "_next/static/chunks/motion-footer-BUq9mOvo.js",
     "name": "motion-footer",
     "src": "components/ui/motion-footer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
       "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
-      "_ScrollTrigger-twpqyZBY.js",
+      "_ScrollTrigger-DFa-6oAs.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js": {
-    "file": "_next/static/chunks/image-ChU4xj-a.js",
+    "file": "_next/static/chunks/image-DpPvMW2B.js",
     "name": "image",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
     "isDynamicEntry": true,
@@ -121,7 +133,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "_next/static/chunks/layout-segment-context-vrmaqhld.js",
+    "file": "_next/static/chunks/layout-segment-context-DEKdkh2K.js",
     "name": "layout-segment-context",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -132,7 +144,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "_next/static/chunks/index-UmBTh2wB.js",
+    "file": "_next/static/chunks/index-DJiDEGTO.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
