@@ -17,9 +17,6 @@ jobs:
   build-and-publish:
     name: Gerar site estático
     runs-on: ubuntu-latest
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
 
     steps:
       - name: Baixar o projeto
@@ -66,40 +63,3 @@ jobs:
           git add --all
           git commit --allow-empty -m "Publicação ${GITHUB_SHA::7}"
           git push origin master
-
-      - name: Aguardar sincronização da KingHost
-        if: ${{ env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ZONE_ID != '' }}
-        env:
-          EXPECTED_INDEX: ${{ runner.temp }}/visioit-public/index.html
-        run: |
-          expected_hash="$(sha256sum "$EXPECTED_INDEX" | cut -d ' ' -f 1)"
-          for attempt in $(seq 1 20); do
-            curl --fail --silent --show-error \
-              --header "Cache-Control: no-cache" \
-              --output "$RUNNER_TEMP/live-index.html" \
-              "https://visioit.com.br/?deploy=${GITHUB_SHA}"
-            live_hash="$(sha256sum "$RUNNER_TEMP/live-index.html" | cut -d ' ' -f 1)"
-            if [ "$live_hash" = "$expected_hash" ]; then
-              echo "A nova versão já está ativa na KingHost."
-              exit 0
-            fi
-            echo "Aguardando a KingHost sincronizar (${attempt}/20)..."
-            sleep 15
-          done
-          echo "A KingHost não confirmou a nova versão dentro de 5 minutos."
-          exit 1
-
-      - name: Limpar cache da Cloudflare
-        if: ${{ env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ZONE_ID != '' }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-        run: |
-          response="$(curl --fail --silent --show-error \
-            --request POST \
-            "https://api.cloudflare.com/client/v4/zones/${CLOUDFLARE_ZONE_ID}/purge_cache" \
-            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            --header "Content-Type: application/json" \
-            --data '{"purge_everything":true}')"
-          echo "$response" | jq --exit-status '.success == true' > /dev/null
-          echo "Cache da Cloudflare limpo com sucesso."
