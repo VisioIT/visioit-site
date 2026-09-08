@@ -6,6 +6,7 @@ import { CinematicFooter } from '@/components/ui/motion-footer';
 import { ClientLogoCarousel } from '@/components/ui/client-logo-carousel';
 import { ContactForm } from './ContactForm';
 import { FloatingWhatsApp } from './FloatingWhatsApp';
+import { CookieConsent } from './CookieConsent';
 
 const whatsapp = 'https://wa.me/5516997113481?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20com%20a%20Visio%20IT.';
 export default function Home() { return <main id="conteudo">
@@ -18,4 +19,5 @@ export default function Home() { return <main id="conteudo">
   <ContactForm />
   <CinematicFooter whatsapp={whatsapp} />
   <FloatingWhatsApp href={whatsapp} />
+  <CookieConsent />
 </main>; }
