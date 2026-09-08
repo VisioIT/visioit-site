@@ -1,6 +1,6 @@
 {
-  "_ScrollTrigger-DFa-6oAs.js": {
-    "file": "_next/static/chunks/ScrollTrigger-DFa-6oAs.js",
+  "_ScrollTrigger-CiLCFU45.js": {
+    "file": "_next/static/chunks/ScrollTrigger-CiLCFU45.js",
     "name": "ScrollTrigger"
   },
   "_framework-BgSIrAUN.js": {
@@ -22,12 +22,12 @@
     "file": "_next/static/chunks/rolldown-runtime-C60lm6uB.js",
     "name": "rolldown-runtime"
   },
-  "_src-BOvQCEog.js": {
-    "file": "_next/static/chunks/src-BOvQCEog.js",
+  "_src-CJfHATc-.js": {
+    "file": "_next/static/chunks/src-CJfHATc-.js",
     "name": "src",
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
-      "_ScrollTrigger-DFa-6oAs.js",
+      "_ScrollTrigger-CiLCFU45.js",
       "_framework-BgSIrAUN.js"
     ]
   },
@@ -51,8 +51,18 @@
       "_framework-BgSIrAUN.js"
     ]
   },
+  "app/CookieConsent.tsx": {
+    "file": "_next/static/chunks/CookieConsent-C_JDUVjq.js",
+    "name": "CookieConsent",
+    "src": "app/CookieConsent.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-BgSIrAUN.js"
+    ]
+  },
   "app/FloatingWhatsApp.tsx": {
-    "file": "_next/static/chunks/FloatingWhatsApp-D2XKAcj3.js",
+    "file": "_next/static/chunks/FloatingWhatsApp-LcR18Uqr.js",
     "name": "FloatingWhatsApp",
     "src": "app/FloatingWhatsApp.tsx",
     "isDynamicEntry": true,
@@ -62,29 +72,29 @@
     ]
   },
   "app/GsapEffects.tsx": {
-    "file": "_next/static/chunks/GsapEffects-NXGAFjHg.js",
+    "file": "_next/static/chunks/GsapEffects-B6ZxuU4L.js",
     "name": "GsapEffects",
     "src": "app/GsapEffects.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "_src-BOvQCEog.js",
-      "_ScrollTrigger-DFa-6oAs.js"
+      "_src-CJfHATc-.js",
+      "_ScrollTrigger-CiLCFU45.js"
     ]
   },
   "app/ScrollWorldExperience.tsx": {
-    "file": "_next/static/chunks/ScrollWorldExperience-C4S2lMf3.js",
+    "file": "_next/static/chunks/ScrollWorldExperience-CmEiEPMl.js",
     "name": "ScrollWorldExperience",
     "src": "app/ScrollWorldExperience.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
-      "_src-BOvQCEog.js",
-      "_ScrollTrigger-DFa-6oAs.js",
+      "_src-CJfHATc-.js",
+      "_ScrollTrigger-CiLCFU45.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "app/ServicesExperience.tsx": {
-    "file": "_next/static/chunks/ServicesExperience-ChmqV2Jt.js",
+    "file": "_next/static/chunks/ServicesExperience-B8RVOv2Q.js",
     "name": "ServicesExperience",
     "src": "app/ServicesExperience.tsx",
     "isDynamicEntry": true,
@@ -92,12 +102,12 @@
       "_rolldown-runtime-C60lm6uB.js",
       "_react-DsYJ8X5F.js",
       "_use-reduced-motion-E7GXNl6B.js",
-      "_ScrollTrigger-DFa-6oAs.js",
+      "_ScrollTrigger-CiLCFU45.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "components/ui/client-logo-carousel.tsx": {
-    "file": "_next/static/chunks/client-logo-carousel-p_ZcdyRw.js",
+    "file": "_next/static/chunks/client-logo-carousel-EE695L5C.js",
     "name": "client-logo-carousel",
     "src": "components/ui/client-logo-carousel.tsx",
     "isDynamicEntry": true,
@@ -110,19 +120,19 @@
     ]
   },
   "components/ui/motion-footer.tsx": {
-    "file": "_next/static/chunks/motion-footer-CS9rvcVT.js",
+    "file": "_next/static/chunks/motion-footer-VafHk5Te.js",
     "name": "motion-footer",
     "src": "components/ui/motion-footer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-C60lm6uB.js",
       "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
-      "_ScrollTrigger-DFa-6oAs.js",
+      "_ScrollTrigger-CiLCFU45.js",
       "_framework-BgSIrAUN.js"
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js": {
-    "file": "_next/static/chunks/image-BmUM5YEC.js",
+    "file": "_next/static/chunks/image-DQpyu1iW.js",
     "name": "image",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
     "isDynamicEntry": true,
@@ -133,7 +143,7 @@
     ]
   },
   "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "_next/static/chunks/layout-segment-context-B7PGpl7i.js",
+    "file": "_next/static/chunks/layout-segment-context-Bcuf6pF6.js",
     "name": "layout-segment-context",
     "src": "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -144,7 +154,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "_next/static/chunks/index-Dr1DlogG.js",
+    "file": "_next/static/chunks/index-B3Jokkuf.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -161,6 +171,7 @@
       "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/image.js",
       "app/FloatingWhatsApp.tsx",
       "node_modules/.pnpm/vinext@1.0.0-beta.3_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_f45de63c93bd6320110e6c2d839b0d60/node_modules/vinext/dist/shims/layout-segment-context.js",
+      "app/CookieConsent.tsx",
       "app/ServicesExperience.tsx",
       "components/ui/client-logo-carousel.tsx"
     ]
