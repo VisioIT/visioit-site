@@ -13,8 +13,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Visio IT | Sua empresa em movimento',
-  description: 'Infraestrutura, segurança, sistemas, aplicativos, sites e hospedagem conectados à operação da sua empresa.',
+  metadataBase: new URL('https://www.visioit.com.br'),
+  title: 'Visio IT | Gestão de TI, Segurança, Cloud e Infraestrutura',
+  description: 'Gestão de TI, segurança, desenvolvimento, cloud, fibra óptica e infraestrutura para empresas em Araraquara e região.',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: '/',
+    siteName: 'Visio IT',
+    title: 'Visio IT | Gestão de TI, Segurança, Cloud e Infraestrutura',
+    description: 'Tecnologia empresarial da nuvem ao cabo: gestão de TI, segurança, desenvolvimento, cloud e infraestrutura.',
+    images: [{
+      url: '/visioit-hero-datacenter.png',
+      width: 1672,
+      height: 941,
+      alt: 'Infraestrutura de data center da Visio IT',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Visio IT | Gestão de TI, Segurança, Cloud e Infraestrutura',
+    description: 'Tecnologia empresarial da nuvem ao cabo, em Araraquara e região.',
+    images: ['/visioit-hero-datacenter.png'],
+  },
   themeColor: '#f2f5f6',
   icons: {
     icon: [{ url: '/visioit-icon.png', type: 'image/png', sizes: '512x512' }],
@@ -29,6 +64,55 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': ['Organization', 'ProfessionalService'],
+              '@id': 'https://www.visioit.com.br/#organization',
+              name: 'Visio IT',
+              url: 'https://www.visioit.com.br/',
+              logo: 'https://www.visioit.com.br/visioit-icon.png',
+              image: 'https://www.visioit.com.br/visioit-hero-datacenter.png',
+              email: 'atendimento@visioit.com.br',
+              telephone: '+55 16 99711-3481',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Araraquara',
+                addressRegion: 'SP',
+                addressCountry: 'BR',
+              },
+              areaServed: {
+                '@type': 'AdministrativeArea',
+                name: 'Araraquara e região',
+              },
+              sameAs: [
+                'https://www.instagram.com/visioit.br/',
+                'https://www.facebook.com/visioit.br',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+55 16 99711-3481',
+                email: 'atendimento@visioit.com.br',
+                contactType: 'customer service',
+                areaServed: 'BR',
+                availableLanguage: 'Portuguese',
+              },
+              knowsAbout: [
+                'Gestão de TI',
+                'Segurança da informação',
+                'Desenvolvimento de software',
+                'Cloud e hospedagem',
+                'Infraestrutura de redes',
+                'Fibra óptica',
+                'Conectividade empresarial',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
