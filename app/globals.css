@@ -92,6 +92,7 @@ img { display:block; max-width:100%; }
 .contact-form-status.is-success { color:#106b30; }
 .contact-form-status.is-error { color:#9a2e2e; }
 .contact-form-success { min-height:280px; display:grid; place-items:center; text-align:center; }.contact-form-success p { max-width:650px; margin:0; font:600 clamp(24px,2.4vw,36px)/1.2 var(--font-geist-sans),sans-serif; letter-spacing:-.025em; text-wrap:balance; }
+.contact-form-stage:has(.contact-form-success) { width:100%; margin-inline:auto; }
 .motion-footer-reveal { width:100%; height:100svh; position:relative; z-index:0; clip-path:inset(0); background:var(--ink); }
 .motion-footer { width:100%; height:100svh; min-height:650px; padding:0; position:fixed; inset:auto 0 0; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; isolation:isolate; border:0; background:#050f1b; color:var(--white); }
 .motion-footer-grid { position:absolute; inset:0; z-index:-2; opacity:.52; pointer-events:none; background-image:linear-gradient(rgb(244 248 251/.05) 1px,transparent 1px),linear-gradient(90deg,rgb(244 248 251/.05) 1px,transparent 1px); background-size:60px 60px; mask-image:linear-gradient(transparent,#000 25%,#000 74%,transparent); }
