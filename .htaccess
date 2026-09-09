@@ -6,6 +6,16 @@
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^visioit\.com\.br$ [NC]
   RewriteRule ^ https://www.visioit.com.br%{REQUEST_URI} [R=301,L]
+
+  # O export estático gera blog.html ao lado da pasta blog/ dos artigos.
+  # Esta regra precisa vir antes da verificação de diretórios para evitar 403.
+  RewriteRule ^blog/?$ /blog.html [L]
+
+  # Entrega páginas estáticas com URLs limpas, sem expor a extensão .html.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>
