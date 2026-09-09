@@ -73,7 +73,7 @@ export default function BlogPage() {
       </section>
 
       <footer className="blog-footer">
-          <Image src="/visio-logo-white.png" width={1910} height={578} alt="Visio IT" />
+          <Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" />
         <p>Tecnologia confiável para empresas.</p>
         <a href="/#contato">Converse com a equipe <span>↗</span></a>
       </footer>

@@ -35,6 +35,30 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   if (!post) notFound();
 
   const articleUrl = `https://www.visioit.com.br/blog/${post.slug}`;
+  const encodedUrl = encodeURIComponent(articleUrl);
+  const encodedTitle = encodeURIComponent(post.title);
+  const shareLinks = [
+    {
+      name: 'WhatsApp',
+      href: `https://wa.me/?text=${encodeURIComponent(`${post.title} — ${articleUrl}`)}`,
+      icon: <path d="M16.7 14.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1-.9-.1a8.3 8.3 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.6.1-.7l.5-.6.3-.6c.1-.2 0-.4 0-.6s-.7-1.8-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z" />,
+    },
+    {
+      name: 'LinkedIn',
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      icon: <><path d="M6.5 8.2H3.2V19h3.3V8.2Z" /><path d="M4.8 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM12 8.2H8.8V19H12v-5.3c0-1.4.3-2.8 2-2.8 1.7 0 1.7 1.6 1.7 2.9V19H19v-5.9c0-2.9-.6-5.2-4.1-5.2-1.7 0-2.8.9-3.2 1.8h-.1V8.2H12Z" /></>,
+    },
+    {
+      name: 'Facebook',
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+      icon: <path d="M14 8h3V4.5c-.5-.1-2.3-.2-3.3-.2-3.2 0-5.4 2-5.4 5.6V13H5v4h3.3v7h4v-7h3.4l.6-4h-4v-2.7c0-1.2.3-2.3 1.7-2.3Z" />,
+    },
+    {
+      name: 'X',
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      icon: <path d="M5.1 4h4.4l3.7 5.2L17.7 4h1.4l-5.3 6.2L20 20h-4.4l-4-5.6L6.8 20H5.4l5.6-6.6L5.1 4Zm3.6 1.2H7.4l9 13.6h1.3l-9-13.6Z" />,
+    },
+  ];
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -99,6 +123,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 {section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}
               </section>
             ))}
+            <section className="article-share" aria-labelledby="compartilhe-title">
+              <div>
+                <span>Espalhe conhecimento</span>
+                <h2 id="compartilhe-title">Compartilhe este artigo</h2>
+              </div>
+              <div className="article-share-links">
+                {shareLinks.map((link) => (
+                  <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Compartilhar no ${link.name}`}>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">{link.icon}</svg>
+                    <span>{link.name}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
             <aside className="article-cta">
               <p>Precisa avaliar esse cenário na sua empresa?</p>
               <a href="/#contato">Converse com a Visio IT <span>↗</span></a>
@@ -108,7 +146,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </article>
 
       <footer className="blog-footer">
-        <Image src="/visio-logo-white.png" width={1910} height={578} alt="Visio IT" />
+        <Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" />
         <p>Conhecimento aplicado à operação.</p>
         <a href="/blog">Voltar ao blog <span>↗</span></a>
       </footer>
