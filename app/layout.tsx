@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { CookieConsent } from './CookieConsent';
 import './globals.css';
 
 const geistSans = Geist({
@@ -75,6 +76,7 @@ export default function RootLayout({
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', { analytics_storage: 'denied' });
               gtag('js', new Date());
               gtag('config', 'G-XPC83Q5TKZ');
             `,
@@ -132,6 +134,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

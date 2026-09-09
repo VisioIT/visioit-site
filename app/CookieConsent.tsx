@@ -7,19 +7,32 @@ const SIX_MONTHS = 60 * 60 * 24 * 180;
 
 type Consent = 'accepted' | 'essential';
 
+function updateAnalyticsConsent(value: Consent) {
+  const analyticsWindow = window as typeof window & {
+    gtag?: (...args: unknown[]) => void;
+  };
+
+  analyticsWindow.gtag?.('consent', 'update', {
+    analytics_storage: value === 'accepted' ? 'granted' : 'denied',
+  });
+}
+
 export function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const hasPreference = document.cookie
+    const preference = document.cookie
       .split('; ')
-      .some(cookie => cookie.startsWith(`${CONSENT_COOKIE}=`));
+      .find(cookie => cookie.startsWith(`${CONSENT_COOKIE}=`))
+      ?.split('=')[1] as Consent | undefined;
 
-    setVisible(!hasPreference);
+    if (preference) updateAnalyticsConsent(preference);
+    setVisible(!preference);
   }, []);
 
   function savePreference(value: Consent) {
     document.cookie = `${CONSENT_COOKIE}=${value}; Max-Age=${SIX_MONTHS}; Path=/; Secure; SameSite=Lax`;
+    updateAnalyticsConsent(value);
     window.dispatchEvent(new CustomEvent('visioit:cookie-consent', { detail: value }));
     setVisible(false);
   }
@@ -31,8 +44,8 @@ export function CookieConsent() {
       <div className="cookie-consent-copy">
         <span aria-hidden="true">COOKIES / 01</span>
         <p>
-          Usamos cookies essenciais para o funcionamento e a segurança do formulário.
-          Você pode aceitar a experiência completa ou manter somente os essenciais.
+          Usamos cookies essenciais para o funcionamento do site e, com sua autorização,
+          o Google Analytics para entender a navegação. Você pode aceitar ou manter somente os essenciais.
         </p>
       </div>
       <div className="cookie-consent-actions">
