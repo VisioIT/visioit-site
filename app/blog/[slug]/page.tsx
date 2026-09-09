@@ -41,7 +41,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     {
       name: 'WhatsApp',
       href: `https://wa.me/?text=${encodeURIComponent(`${post.title} — ${articleUrl}`)}`,
-      icon: <path d="M16.7 14.4c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1-.9-.1a8.3 8.3 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.6.1-.7l.5-.6.3-.6c.1-.2 0-.4 0-.6s-.7-1.8-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z" />,
+      icon: <path d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2.2 22l5.2-1.4A9.9 9.9 0 1 0 12 2Zm0 17.8a7.8 7.8 0 0 1-4-1.1l-.3-.2-3 .8.8-3-.2-.3A7.9 7.9 0 1 1 12 19.8Zm4.3-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5.2-.5c.1-.2 0-.4 0-.5l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.4-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.2-.3-.5-.4Z" />,
     },
     {
       name: 'LinkedIn',
@@ -130,7 +130,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               </div>
               <div className="article-share-links">
                 {shareLinks.map((link) => (
-                  <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Compartilhar no ${link.name}`}>
+                  <a className={`share-${link.name.toLowerCase()}`} key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Compartilhar no ${link.name}`}>
                     <svg viewBox="0 0 24 24" aria-hidden="true">{link.icon}</svg>
                     <span>{link.name}</span>
                   </a>
@@ -146,7 +146,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       </article>
 
       <footer className="blog-footer">
-        <Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" />
+        <Image src="/visio-logo-footer.png" width={1910} height={578} alt="Visio IT" />
         <p>Conhecimento aplicado à operação.</p>
         <a href="/blog">Voltar ao blog <span>↗</span></a>
       </footer>
