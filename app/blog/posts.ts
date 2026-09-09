@@ -137,6 +137,112 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'como-reduzir-custos-de-ti-sem-criar-riscos',
+    title: 'Como reduzir custos de TI sem criar novos riscos',
+    excerpt: 'Um roteiro para eliminar desperdícios, priorizar investimentos e economizar sem comprometer a operação.',
+    category: 'Gestão de TI',
+    publishedAt: '2026-08-27',
+    updatedAt: '2026-08-27',
+    readingTime: '10 min de leitura',
+    image: '/blog-custos-ti.jpg',
+    imageAlt: 'Especialista avaliando capacidade e custos de infraestrutura em um ambiente de TI',
+    intro: 'Reduzir custos de tecnologia não deveria significar adiar atualizações importantes ou aceitar mais indisponibilidade. A economia sustentável aparece quando a empresa entende o que utiliza, remove desperdícios e direciona recursos para o que sustenta a operação.',
+    sections: [
+      {
+        title: 'Comece pelo inventário e pelo custo total',
+        paragraphs: ['Antes de cancelar contratos, reúna equipamentos, licenças, serviços em nuvem, links, suporte e garantias em uma visão única. Registre valor, responsável, quantidade contratada, uso real, renovação e processo atendido.', 'O preço de compra é apenas uma parte do custo. Inclua manutenção, energia, indisponibilidade, horas da equipe e risco de manter uma solução sem suporte. Um equipamento antigo pode parecer econômico até exigir intervenções frequentes ou interromper um setor.'],
+        bullets: ['Licenças atribuídas e efetivamente utilizadas', 'Serviços duplicados com a mesma função', 'Equipamentos fora de garantia ou sem atualização', 'Contratos próximos da renovação automática', 'Recursos em nuvem ativos sem responsável definido'],
+      },
+      {
+        title: 'Elimine desperdício antes de reduzir capacidade',
+        paragraphs: ['Licenças de ex-colaboradores, máquinas virtuais esquecidas, armazenamento duplicado e planos superdimensionados são alvos melhores do que cortar redundância ou proteção. Primeiro remova aquilo que não entrega valor; depois redimensione o que permaneceu.', 'Use dados de utilização por um período representativo. Um servidor com baixo consumo hoje pode atender um fechamento mensal, uma integração noturna ou uma contingência. A decisão precisa considerar picos e dependências, não apenas a média.'],
+      },
+      {
+        title: 'Padronização reduz custo invisível',
+        paragraphs: ['Muitos modelos de computadores, fornecedores e versões de software aumentam o tempo necessário para suporte, atualização e reposição. Uma lista curta de padrões por perfil de trabalho facilita compras, estoque de peças e automação.', 'Documente configurações mínimas, ciclo de substituição e exceções aprovadas. Padronizar não significa oferecer o mesmo equipamento a todos, mas criar poucas categorias coerentes com as necessidades reais.'],
+      },
+      {
+        title: 'Negocie contratos com evidências',
+        paragraphs: ['Renegociar funciona melhor quando a empresa conhece consumo, nível de serviço e alternativas. Reúna chamados, períodos de indisponibilidade e recursos não utilizados antes da renovação. Compare propostas pelo escopo completo, não somente pela mensalidade.', 'Evite dependência sem plano de saída. Contratos importantes devem esclarecer propriedade dos dados, exportação, prazos de atendimento, reajustes e apoio em uma eventual migração. Uma solução barata pode se tornar cara quando a troca é difícil.'],
+      },
+      {
+        title: 'Transforme economia em uma rotina',
+        paragraphs: ['Defina revisões trimestrais de licenças, capacidade e contratos. Para cada ação, registre economia prevista, impacto, responsável e indicador de segurança ou disponibilidade que não pode piorar.', 'Parte do valor economizado deve financiar melhorias que diminuam riscos futuros, como gestão centralizada, automação, backup ou renovação de ativos críticos. Assim, a redução de custos fortalece a operação em vez de apenas transferir problemas para o próximo orçamento.'],
+      },
+    ],
+  },
+  {
+    slug: 'mfa-como-proteger-contas-da-empresa',
+    title: 'MFA: como proteger as contas da empresa além da senha',
+    excerpt: 'Como escolher, implantar e manter a autenticação multifator sem transformar segurança em obstáculo.',
+    category: 'Segurança',
+    publishedAt: '2026-08-13',
+    updatedAt: '2026-08-13',
+    readingTime: '11 min de leitura',
+    image: '/blog-mfa-contas.jpg',
+    imageAlt: 'Profissional confirmando uma autenticação segura pelo celular ao lado de um notebook',
+    intro: 'Senhas podem ser descobertas, reutilizadas ou entregues em uma página falsa. A autenticação multifator, conhecida como MFA, adiciona uma segunda verificação e reduz a chance de uma credencial roubada se transformar em acesso à empresa.',
+    sections: [
+      {
+        title: 'Por que a senha não é suficiente',
+        paragraphs: ['Mesmo uma senha longa pode ser exposta por phishing, malware ou vazamento de outro serviço. Quando a mesma credencial é reutilizada, um incidente fora da empresa também pode abrir caminho para o e-mail, arquivos e sistemas internos.', 'O MFA combina elementos diferentes: algo que a pessoa sabe, possui ou é. Para entrar, o invasor precisa superar mais de uma barreira. Isso não elimina todo risco, mas reduz significativamente os ataques baseados apenas em senha.'],
+      },
+      {
+        title: 'Nem todo segundo fator oferece a mesma proteção',
+        paragraphs: ['Códigos por SMS são melhores do que nenhuma camada adicional, mas podem ser expostos por fraude na linha telefônica e páginas falsas. Aplicativos autenticadores evitam parte desses riscos. Chaves físicas e métodos resistentes a phishing oferecem proteção superior para contas críticas.', 'A escolha deve equilibrar risco, compatibilidade e facilidade de recuperação. Administradores, financeiro e direção merecem os métodos mais fortes, pois suas contas podem autorizar mudanças, pagamentos ou acesso amplo.'],
+        bullets: ['Priorize chaves de segurança ou passkeys quando disponíveis', 'Use aplicativo autenticador como alternativa consistente', 'Evite SMS como único método em contas privilegiadas', 'Desative métodos antigos depois da migração'],
+      },
+      {
+        title: 'Implante por prioridade e com comunicação',
+        paragraphs: ['Comece por e-mail, identidade central, acesso remoto, sistemas financeiros, armazenamento em nuvem e painéis administrativos. Teste com um grupo pequeno, documente as etapas e informe por que a mudança está acontecendo.', 'Uma implantação apressada gera bloqueios e atalhos inseguros. Prepare instruções curtas, canal de suporte e prazo claro. Depois do período de adaptação, torne o MFA obrigatório e acompanhe contas que ainda não concluíram o cadastro.'],
+      },
+      {
+        title: 'Planeje recuperação sem criar uma porta dos fundos',
+        paragraphs: ['Troca ou perda do celular não pode depender de improviso. Mantenha métodos alternativos protegidos, códigos de recuperação armazenados de forma segura e um processo de validação de identidade para redefinições.', 'O suporte nunca deve remover o MFA apenas porque alguém fez uma solicitação urgente. Defina quem pode aprovar a recuperação, quais evidências são necessárias e como a ação será registrada. Contas de emergência devem ser poucas, monitoradas e testadas.'],
+      },
+      {
+        title: 'MFA faz parte de um conjunto de controles',
+        paragraphs: ['Continue exigindo senhas exclusivas, removendo contas antigas e revisando permissões. Ative alertas de login, bloqueie protocolos obsoletos e investigue solicitações de aprovação inesperadas.', 'Treine a equipe para negar notificações que não iniciou e comunicar o ocorrido. Uma sequência de pedidos de aprovação pode indicar que a senha já foi comprometida. Nesse caso, altere a credencial, encerre sessões e revise os registros de acesso.'],
+      },
+    ],
+  },
+  {
+    slug: 'cloud-servidor-local-ou-ambiente-hibrido',
+    title: 'Cloud, servidor local ou ambiente híbrido: como decidir',
+    excerpt: 'Critérios práticos para escolher onde executar sistemas e armazenar dados sem seguir modismos.',
+    category: 'Cloud',
+    publishedAt: '2026-07-30',
+    updatedAt: '2026-07-30',
+    readingTime: '12 min de leitura',
+    image: '/blog-cloud-hibrida.jpg',
+    imageAlt: 'Profissional caminhando entre servidores locais e uma área moderna de operações',
+    intro: 'Não existe um destino único para toda carga de trabalho. Nuvem, servidor local e ambiente híbrido resolvem problemas diferentes. A decisão correta considera aplicações, conectividade, segurança, equipe, custos e o impacto de uma interrupção.',
+    sections: [
+      {
+        title: 'Comece pela carga de trabalho',
+        paragraphs: ['Liste sistemas, bancos de dados, arquivos, integrações, usuários e horários críticos. Identifique dependências de equipamentos locais, volume de tráfego e tolerância a latência. A pergunta não é onde a empresa inteira deve estar, mas onde cada serviço funciona melhor.', 'Um sistema acessado por equipes distribuídas pode ganhar flexibilidade na nuvem. Já uma aplicação industrial dependente de equipamentos internos pode exigir processamento local. Arquivos e identidades podem seguir uma estratégia diferente da aplicação principal.'],
+      },
+      {
+        title: 'Quando a nuvem tende a fazer sentido',
+        paragraphs: ['A nuvem facilita expansão rápida, acesso distribuído e contratação de serviços gerenciados. Ela pode reduzir o tempo dedicado a hardware e permitir que capacidade acompanhe projetos temporários ou crescimento imprevisível.', 'Isso não significa custo automaticamente menor. Recursos esquecidos, transferência de dados, armazenamento crescente e arquitetura inadequada podem elevar a fatura. É necessário definir orçamento, alertas, responsáveis e revisão periódica desde o início.'],
+        bullets: ['Demanda variável ou crescimento rápido', 'Equipes em diferentes locais', 'Necessidade de provisionamento ágil', 'Uso de serviços gerenciados e automação', 'Capacidade interna limitada para manter hardware'],
+      },
+      {
+        title: 'Quando manter recursos locais é coerente',
+        paragraphs: ['Servidores locais podem ser adequados quando a aplicação exige baixa latência, conversa intensamente com máquinas do ambiente ou não pode depender integralmente do link. Investimentos já realizados e requisitos específicos também influenciam.', 'A infraestrutura local exige ciclo de renovação, energia protegida, refrigeração, monitoramento, peças e pessoas capacitadas. Compare o custo durante toda a vida útil e inclua contingência; não trate o equipamento comprado como custo encerrado.'],
+      },
+      {
+        title: 'O híbrido precisa de integração e governo',
+        paragraphs: ['Um ambiente híbrido combina recursos locais e nuvem. Ele pode manter aplicações próximas da operação enquanto usa serviços externos para colaboração, backup, contingência ou capacidade adicional.', 'A combinação só funciona bem quando identidade, rede, monitoramento e responsabilidades são integrados. Sem padrões, a empresa passa a administrar dois ambientes isolados, duplicando ferramentas e pontos cegos. Documente os fluxos de dados e defina qual ambiente é a fonte oficial de cada informação.'],
+      },
+      {
+        title: 'Compare cenários, não promessas',
+        paragraphs: ['Monte ao menos três cenários para um horizonte de três a cinco anos. Inclua implantação, migração, licenças, links, equipe, suporte, crescimento, backup e recuperação. Avalie também o custo de saída e a portabilidade dos dados.', 'Faça uma prova de conceito com uma carga representativa antes de migrar um sistema crítico. Meça desempenho, experiência dos usuários, consumo e operação diária. A arquitetura escolhida deve ser revisada com o tempo, pois preços, aplicações e necessidades do negócio mudam.'],
+        bullets: ['Custo total e previsibilidade', 'Disponibilidade e recuperação', 'Segurança e requisitos contratuais', 'Desempenho e dependência de conectividade', 'Capacidade da equipe e facilidade de gestão'],
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string) {
