@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { blogPosts, formatPostDate } from './posts';
 
 export const metadata: Metadata = {
@@ -22,11 +21,11 @@ export default function BlogPage() {
     <main className="blog-shell">
       <a className="skip-link" href="#artigos">Ir para os artigos</a>
       <header className="blog-header">
-        <Link className="blog-brand" href="/" aria-label="Visio IT, página inicial">
+        <a className="blog-brand" href="/" aria-label="Visio IT, página inicial">
           <Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" priority />
-        </Link>
+        </a>
         <nav aria-label="Navegação do blog">
-          <Link href="/">Site institucional</Link>
+          <a href="/">Site institucional</a>
           <a href="#artigos">Artigos</a>
           <a href="/#contato">Fale conosco</a>
         </nav>
@@ -40,14 +39,14 @@ export default function BlogPage() {
       </section>
 
       <section className="blog-featured" aria-labelledby="destaque-title">
-        <Link className="blog-featured-image" href={`/blog/${featured.slug}`}>
+        <a className="blog-featured-image" href={`/blog/${featured.slug}`}>
           <Image src={featured.image} alt={featured.imageAlt} fill sizes="(max-width: 900px) 100vw, 58vw" priority />
-        </Link>
+        </a>
         <div className="blog-featured-copy">
           <p className="blog-meta"><span>{featured.category}</span> {featured.readingTime}</p>
-          <h2 id="destaque-title"><Link href={`/blog/${featured.slug}`}>{featured.title}</Link></h2>
+          <h2 id="destaque-title"><a href={`/blog/${featured.slug}`}>{featured.title}</a></h2>
           <p>{featured.excerpt}</p>
-          <Link className="blog-read-link" href={`/blog/${featured.slug}`}>Ler artigo <span>↗</span></Link>
+          <a className="blog-read-link" href={`/blog/${featured.slug}`}>Ler artigo <span>↗</span></a>
         </div>
       </section>
 
@@ -60,14 +59,14 @@ export default function BlogPage() {
         <div className="blog-grid">
           {posts.map((post, index) => (
             <article className="blog-card" key={post.slug}>
-              <Link className="blog-card-image" href={`/blog/${post.slug}`}>
+              <a className="blog-card-image" href={`/blog/${post.slug}`}>
                 <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 700px) 100vw, 50vw" />
                 <span aria-hidden="true">0{index + 2}</span>
-              </Link>
+              </a>
               <p className="blog-meta"><span>{post.category}</span> {formatPostDate(post.publishedAt)}</p>
-              <h3><Link href={`/blog/${post.slug}`}>{post.title}</Link></h3>
+              <h3><a href={`/blog/${post.slug}`}>{post.title}</a></h3>
               <p>{post.excerpt}</p>
-              <Link className="blog-read-link" href={`/blog/${post.slug}`}>Ler artigo <span>↗</span></Link>
+              <a className="blog-read-link" href={`/blog/${post.slug}`}>Ler artigo <span>↗</span></a>
             </article>
           ))}
         </div>

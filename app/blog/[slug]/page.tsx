@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts, formatPostDate, getPost } from '../posts';
 
@@ -64,15 +63,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
       <a className="skip-link" href="#artigo">Ir para o artigo</a>
       <header className="blog-header article-header">
-        <Link className="blog-brand" href="/" aria-label="Visio IT, página inicial">
+        <a className="blog-brand" href="/" aria-label="Visio IT, página inicial">
           <Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" priority />
-        </Link>
-        <nav aria-label="Navegação do artigo"><Link href="/blog">Todos os artigos</Link><a href="/#contato">Fale conosco</a></nav>
+        </a>
+        <nav aria-label="Navegação do artigo"><a href="/blog">Todos os artigos</a><a href="/#contato">Fale conosco</a></nav>
       </header>
 
       <article id="artigo">
         <div className="article-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/">Início</Link><span>/</span><Link href="/blog">Blog</Link><span>/</span><span>{post.category}</span>
+          <a href="/">Início</a><span>/</span><a href="/blog">Blog</a><span>/</span><span>{post.category}</span>
         </div>
         <header className="article-hero">
           <p className="blog-meta"><span>{post.category}</span> {post.readingTime}</p>
@@ -111,7 +110,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <footer className="blog-footer">
         <Image src="/visio-logo-white.png" width={1910} height={578} alt="Visio IT" />
         <p>Conhecimento aplicado à operação.</p>
-        <Link href="/blog">Voltar ao blog <span>↗</span></Link>
+        <a href="/blog">Voltar ao blog <span>↗</span></a>
       </footer>
     </main>
   );
