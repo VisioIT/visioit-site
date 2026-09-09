@@ -11,7 +11,7 @@ const whatsapp = 'https://wa.me/5516997113481?text=Ol%C3%A1%2C%20gostaria%20de%2
 export default function Home() { return <main id="conteudo">
   <GsapEffects />
   <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
-  <header className="site-header"><a className="brand" href="#inicio" aria-label="Visio IT, início"><Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" priority /></a><nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#clientes">Clientes</a><a href="/blog">Blog</a><a href="#contato">Contato</a></nav><a className="header-contact" href={whatsapp} target="_blank" rel="noreferrer">Fale com a Visio <span aria-hidden="true">↗</span></a></header>
+  <header className="site-header"><a className="brand" href="#inicio" aria-label="Visio IT, início"><Image src="/visio-logo-menu.png" width={1910} height={578} alt="Visio IT" priority /></a><nav aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#clientes">Clientes</a><a href="#contato">Contato</a></nav><a className="header-contact" href={whatsapp} target="_blank" rel="noreferrer">Fale com a Visio <span aria-hidden="true">↗</span></a></header>
   <ScrollWorldExperience whatsapp={whatsapp} />
   <ServicesExperience whatsapp={whatsapp} />
   <ClientLogoCarousel />
