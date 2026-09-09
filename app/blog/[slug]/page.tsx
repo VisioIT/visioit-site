@@ -132,7 +132,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 {shareLinks.map((link) => (
                   <a className={`share-${link.name.toLowerCase()}`} key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Compartilhar no ${link.name}`}>
                     <svg viewBox="0 0 24 24" aria-hidden="true">{link.icon}</svg>
-                    <span>{link.name}</span>
                   </a>
                 ))}
               </div>
