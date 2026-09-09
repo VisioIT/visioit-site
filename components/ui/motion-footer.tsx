@@ -97,7 +97,7 @@ export function CinematicFooter({ whatsapp }: { whatsapp: string }) {
           </a>
           <a className="motion-footer-social" href="https://www.facebook.com/visioit.br" target="_blank" rel="noreferrer" aria-label="Visio IT no Facebook, abre em nova aba">
             <svg className="facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-8h2.8l.42-3.15H13.6V7.83c0-.91.26-1.53 1.62-1.53h1.73V3.49a23.7 23.7 0 0 0-2.52-.13c-2.5 0-4.2 1.48-4.2 4.2v2.29H7.4V13h2.83v8h3.37Z" /></svg>
-            <span>Facebook</span>
+            <span>@visioit.br</span>
           </a>
         </div>
       </div>
