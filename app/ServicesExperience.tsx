@@ -13,6 +13,18 @@ const services = [
   { id:'infraestrutura', number:'03', short:'Infraestrutura & Conectividade', verb:'Conectamos', mode:'connect', image:'/service-infrastructure-v2.jpg', title:<>A estrutura física<br />que mantém tudo <em>conectado.</em></>, promise:'Projetamos e executamos redes corporativas do rack ao ponto mais distante da operação.', when:'Para implantar, ampliar ou organizar a conectividade da empresa com padrão profissional.', items:['Cabeamento estruturado','Fibra óptica','Racks e data center','Redes corporativas','Wireless indoor e outdoor','Links e telecom'], result:'Uma base organizada, documentada e preparada para suportar pessoas, sistemas e crescimento.' },
 ] as const;
 
+const serviceLinks: Record<string, string> = {
+  'Gestão e suporte de TI':'gestao-e-suporte-de-ti', 'Firewall, VPN e segurança':'firewall-vpn-e-seguranca',
+  'Servidores físicos e virtuais':'servidores-fisicos-e-virtuais', 'Backup e recuperação':'backup-e-recuperacao-de-dados',
+  'Monitoramento preventivo':'monitoramento-preventivo-de-ti', 'Continuidade operacional':'continuidade-operacional-de-ti',
+  'Sistemas sob demanda':'desenvolvimento-de-sistemas-sob-medida', 'Aplicativos iOS e Android':'desenvolvimento-de-aplicativos-ios-android',
+  'Sites e portais corporativos':'criacao-de-sites-e-portais-corporativos', 'Integrações e APIs':'integracoes-de-sistemas-e-apis',
+  'Automação de processos':'automacao-de-processos-empresariais', 'Hospedagem e cloud':'hospedagem-e-cloud-para-empresas',
+  'Cabeamento estruturado':'cabeamento-estruturado', 'Fibra óptica':'instalacao-e-fusao-de-fibra-optica',
+  'Racks e data center':'racks-e-data-center', 'Redes corporativas':'redes-corporativas',
+  'Wireless indoor e outdoor':'wifi-empresarial-indoor-outdoor', 'Links e telecom':'links-de-internet-e-telecom',
+};
+
 export function ServicesExperience({ whatsapp }: { whatsapp: string }) {
   const rootRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -108,7 +120,7 @@ export function ServicesExperience({ whatsapp }: { whatsapp: string }) {
           <p className="services-switcher-promise">{active.promise}</p>
           <div className="services-switcher-info">
             <div><span>Quando procurar a Visio</span><p>{active.when}</p></div>
-            <div><span>O que entregamos</span><ul>{active.items.map(item => <li key={item}>+ {item}</li>)}</ul></div>
+            <div><span>O que entregamos</span><ul>{active.items.map(item => <li key={item}>+ <a href={`/servicos/${serviceLinks[item]}`}>{item}</a></li>)}</ul></div>
           </div>
           <div className="services-switcher-result"><span>Resultado</span><p>{active.result}</p><a href={whatsapp} target="_blank" rel="noreferrer">Falar sobre esta solução <b>↗</b></a></div>
         </motion.article>

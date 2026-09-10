@@ -79,7 +79,7 @@ export function CinematicFooter({ whatsapp }: { whatsapp: string }) {
         </nav>
         <nav className="motion-footer-column motion-footer-services" aria-label="Serviços">
           <p>Serviços</p>
-          <a href="#gestao-ti">Gestão de TI &amp; Segurança</a><a href="#desenvolvimento">Desenvolvimento &amp; Cloud</a><a href="#infraestrutura">Infraestrutura &amp; Conectividade</a>
+          <a href="/servicos#categoria-1">Gestão de TI &amp; Segurança</a><a href="/servicos#categoria-2">Desenvolvimento &amp; Cloud</a><a href="/servicos#categoria-3">Infraestrutura &amp; Conectividade</a>
         </nav>
         <div className="motion-footer-column">
           <p>Contato</p>
