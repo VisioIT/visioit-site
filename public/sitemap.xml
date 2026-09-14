@@ -7,9 +7,15 @@
   </url>
   <url>
     <loc>https://www.visioit.com.br/blog</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.visioit.com.br/blog/inventario-de-ativos-de-ti-para-empresas</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.visioit.com.br/blog/backup-3-2-1-para-empresas</loc>

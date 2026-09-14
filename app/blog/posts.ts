@@ -20,6 +20,52 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'inventario-de-ativos-de-ti-para-empresas',
+    title: 'Inventário de ativos de TI: como organizar equipamentos, licenças e riscos',
+    excerpt: 'Um método prático para saber o que a empresa possui, quem utiliza, quanto custa e o que precisa ser renovado.',
+    category: 'Gestão de TI',
+    publishedAt: '2026-09-14',
+    updatedAt: '2026-09-14',
+    readingTime: '12 min de leitura',
+    image: '/blog-inventario-ativos-ti.jpg',
+    imageAlt: 'Profissional de TI catalogando notebooks e equipamentos de rede em um inventário de ativos',
+    intro: 'É difícil proteger, manter ou planejar aquilo que a empresa não conhece. Um inventário de ativos de TI reúne equipamentos, sistemas, licenças, serviços e responsáveis em uma visão confiável. Mais do que uma lista patrimonial, ele ajuda a reduzir interrupções, controlar custos e antecipar riscos antes que um recurso importante fique sem suporte.',
+    sections: [
+      {
+        title: 'O que deve entrar no inventário de TI',
+        paragraphs: ['Comece pelos recursos que armazenam dados, conectam pessoas ou sustentam processos. Inclua computadores, servidores, switches, roteadores, pontos de acesso, nobreaks, impressoras, celulares corporativos e equipamentos de videoconferência. Depois, registre softwares, licenças, serviços em nuvem, domínios, certificados digitais, links de internet e contratos de suporte.', 'Cada item precisa ter informações suficientes para responder perguntas práticas: onde está, quem utiliza, qual processo atende, quando foi adquirido e quem deve agir em caso de falha. Evite criar dezenas de campos que nunca serão mantidos. Um inventário simples e atualizado é mais valioso do que uma planilha sofisticada e abandonada.'],
+        bullets: ['Identificação ou etiqueta do ativo', 'Categoria, fabricante, modelo e número de série', 'Usuário, setor e localização', 'Sistema operacional, versão e configuração relevante', 'Garantia, contrato, custo e data de renovação', 'Criticidade, responsável e situação atual'],
+      },
+      {
+        title: 'Relacione cada ativo ao negócio',
+        paragraphs: ['Dois equipamentos iguais podem ter riscos muito diferentes. Um notebook reserva e um computador usado para faturamento não devem receber a mesma prioridade. Registre o processo atendido, a tolerância à indisponibilidade e as dependências importantes, como rede, autenticação, banco de dados ou fornecedor externo.', 'Essa relação transforma o inventário em ferramenta de decisão. Quando uma vulnerabilidade, falha ou fim de suporte é identificado, a equipe consegue avaliar rapidamente quais áreas serão afetadas e qual correção deve acontecer primeiro. Também fica mais fácil construir planos de continuidade e definir equipamentos de contingência.'],
+      },
+      {
+        title: 'Inclua licenças, nuvem e serviços recorrentes',
+        paragraphs: ['O patrimônio físico é apenas parte do ambiente. Contas de e-mail, plataformas de colaboração, máquinas virtuais, armazenamento, antivírus, backup e sistemas por assinatura também geram custo e risco. Registre quantidade contratada, quantidade utilizada, administrador responsável, forma de cobrança e data de renovação.', 'Essa visão revela licenças de ex-colaboradores, planos superdimensionados, serviços duplicados e recursos em nuvem sem proprietário. Antes de cancelar algo, confirme integrações e dependências: um serviço aparentemente sem usuário pode executar rotinas automáticas ou armazenar dados necessários para auditoria.'],
+        bullets: ['Compare licenças compradas, atribuídas e utilizadas', 'Identifique renovações automáticas com antecedência', 'Separe contas administrativas das contas de uso diário', 'Registre onde os dados podem ser exportados e recuperados', 'Defina um responsável técnico e um responsável do negócio'],
+      },
+      {
+        title: 'Crie um ciclo de entrada, mudança e saída',
+        paragraphs: ['O inventário precisa acompanhar a vida do ativo. Na compra, registre e etiquete antes de entregar. Em mudanças de usuário ou setor, atualize localização, permissões e responsável. Na devolução, confirme estado, remova acessos, preserve dados necessários e registre o destino do equipamento.', 'O descarte também exige controle. Apagar arquivos manualmente ou formatar rapidamente pode não ser suficiente para dados sensíveis. Defina um procedimento de sanitização compatível com o tipo de mídia, guarde evidências da execução e utilize descarte ambientalmente adequado quando o equipamento não puder ser reaproveitado.'],
+      },
+      {
+        title: 'Use o inventário para planejar o ciclo de vida',
+        paragraphs: ['Agrupe os ativos por idade, garantia, capacidade e disponibilidade de atualizações. Em vez de substituir tudo ao mesmo tempo, monte uma fila baseada em criticidade e risco. Equipamentos que sustentam serviços essenciais, apresentam falhas recorrentes ou deixaram de receber correções devem ser analisados primeiro.', 'Com um horizonte de doze a vinte e quatro meses, a direção consegue prever investimentos e evitar compras emergenciais. O planejamento também permite padronizar modelos, negociar contratos e preparar a migração de aplicações antes que um servidor ou sistema chegue ao limite.'],
+        bullets: ['Ativos fora de garantia', 'Sistemas sem atualizações de segurança', 'Equipamentos com incidentes recorrentes', 'Capacidade próxima do limite', 'Dependências sem redundância ou peça de reposição'],
+      },
+      {
+        title: 'Mantenha a informação confiável',
+        paragraphs: ['Defina uma pessoa responsável pela qualidade do inventário, mas distribua a atualização pelos processos. Compras deve comunicar aquisições; recursos humanos deve sinalizar entradas e desligamentos; suporte deve registrar trocas; financeiro deve informar renovações. Assim, a planilha ou plataforma não depende de uma grande revisão anual.', 'Faça verificações periódicas por amostragem e uma conferência completa em ciclos definidos. Compare o registro com ferramentas de gerenciamento, painéis dos fornecedores e inspeção física. Divergências devem gerar correção e investigação do processo que permitiu o erro.'],
+      },
+      {
+        title: 'Como começar sem transformar o projeto em burocracia',
+        paragraphs: ['Escolha primeiro os ativos críticos e os equipamentos utilizados pelas pessoas. Defina poucos campos obrigatórios, um padrão de etiqueta e um local oficial para os registros. Depois, acrescente contratos, licenças, nuvem e dependências. Cada etapa deve produzir informação que ajude uma decisão real.', 'Ao final da primeira rodada, gere três listas: riscos que exigem correção imediata, renovações previstas para os próximos meses e itens sem responsável ou finalidade confirmada. O inventário passa a ter valor quando orienta ações, orçamento e segurança — não quando apenas acumula números de série.'],
+        bullets: ['Defina o escopo inicial', 'Escolha os campos obrigatórios', 'Catalogue e valide os ativos prioritários', 'Atribua responsáveis e criticidade', 'Crie alertas para garantia e renovação', 'Revise mensalmente mudanças e pendências'],
+      },
+    ],
+  },
+  {
     slug: 'backup-3-2-1-para-empresas',
     title: 'Backup 3-2-1: como proteger os dados da empresa',
     excerpt: 'Uma estratégia prática para reduzir o risco de perder arquivos, sistemas e histórico operacional.',
