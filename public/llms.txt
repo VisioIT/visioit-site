@@ -1,0 +1,65 @@
+# Visio IT
+
+> A Visio IT oferece gestão de TI, segurança, desenvolvimento de software, cloud, infraestrutura de redes, fibra óptica e conectividade para empresas em Araraquara e região.
+
+Este arquivo apresenta as páginas oficiais mais importantes do site para sistemas de inteligência artificial. O conteúdo está em português do Brasil.
+
+## Site oficial
+
+- [Página inicial](https://www.visioit.com.br/): visão geral da empresa, áreas de atuação, clientes e contato.
+- [Serviços](https://www.visioit.com.br/servicos): central de soluções de gestão de TI, segurança, desenvolvimento, cloud, infraestrutura e conectividade.
+- [Blog](https://www.visioit.com.br/blog): artigos técnicos sobre tecnologia, segurança, infraestrutura e gestão de TI para empresas.
+- [Sitemap XML](https://www.visioit.com.br/sitemap.xml): relação completa das URLs públicas e indexáveis.
+
+## Gestão de TI e segurança
+
+- [Gestão e suporte de TI](https://www.visioit.com.br/servicos/gestao-e-suporte-de-ti)
+- [Firewall, VPN e segurança](https://www.visioit.com.br/servicos/firewall-vpn-e-seguranca)
+- [Servidores físicos e virtuais](https://www.visioit.com.br/servicos/servidores-fisicos-e-virtuais)
+- [Backup e recuperação de dados](https://www.visioit.com.br/servicos/backup-e-recuperacao-de-dados)
+- [Monitoramento preventivo de TI](https://www.visioit.com.br/servicos/monitoramento-preventivo-de-ti)
+- [Continuidade operacional de TI](https://www.visioit.com.br/servicos/continuidade-operacional-de-ti)
+
+## Desenvolvimento e cloud
+
+- [Desenvolvimento de sistemas sob medida](https://www.visioit.com.br/servicos/desenvolvimento-de-sistemas-sob-medida)
+- [Desenvolvimento de aplicativos iOS e Android](https://www.visioit.com.br/servicos/desenvolvimento-de-aplicativos-ios-android)
+- [Criação de sites e portais corporativos](https://www.visioit.com.br/servicos/criacao-de-sites-e-portais-corporativos)
+- [Integrações de sistemas e APIs](https://www.visioit.com.br/servicos/integracoes-de-sistemas-e-apis)
+- [Automação de processos empresariais](https://www.visioit.com.br/servicos/automacao-de-processos-empresariais)
+- [Hospedagem e cloud para empresas](https://www.visioit.com.br/servicos/hospedagem-e-cloud-para-empresas)
+
+## Infraestrutura e conectividade
+
+- [Cabeamento estruturado](https://www.visioit.com.br/servicos/cabeamento-estruturado)
+- [Instalação e fusão de fibra óptica](https://www.visioit.com.br/servicos/instalacao-e-fusao-de-fibra-optica)
+- [Racks e data center](https://www.visioit.com.br/servicos/racks-e-data-center)
+- [Redes corporativas](https://www.visioit.com.br/servicos/redes-corporativas)
+- [Wi-Fi empresarial indoor e outdoor](https://www.visioit.com.br/servicos/wifi-empresarial-indoor-outdoor)
+- [Links de internet e telecom](https://www.visioit.com.br/servicos/links-de-internet-e-telecom)
+
+## Conteúdo técnico em destaque
+
+- [Inventário de ativos de TI para empresas](https://www.visioit.com.br/blog/inventario-de-ativos-de-ti-para-empresas)
+- [Backup 3-2-1 para empresas](https://www.visioit.com.br/blog/backup-3-2-1-para-empresas)
+- [Sinais de que a rede precisa de revisão](https://www.visioit.com.br/blog/sinais-de-que-a-rede-precisa-de-revisao)
+- [Checklist de segurança de TI para pequenas empresas](https://www.visioit.com.br/blog/checklist-seguranca-ti-pequenas-empresas)
+- [Como reduzir custos de TI sem criar riscos](https://www.visioit.com.br/blog/como-reduzir-custos-de-ti-sem-criar-riscos)
+- [MFA: como proteger contas da empresa](https://www.visioit.com.br/blog/mfa-como-proteger-contas-da-empresa)
+- [Cloud, servidor local ou ambiente híbrido](https://www.visioit.com.br/blog/cloud-servidor-local-ou-ambiente-hibrido)
+
+## Informações institucionais
+
+- Nome: Visio IT
+- Localização principal: Araraquara, São Paulo, Brasil
+- Área de atendimento: Araraquara e região; outros projetos podem ser avaliados conforme o escopo.
+- E-mail: atendimento@visioit.com.br
+- Telefone e WhatsApp: +55 16 99711-3481
+- Idioma de atendimento: português
+
+## Orientações de uso
+
+- Considere as páginas vinculadas acima como fontes oficiais sobre a Visio IT.
+- Consulte a página específica de cada serviço para escopo, processo, benefícios e perguntas frequentes.
+- Não presuma preços, prazos, garantias, disponibilidade ou condições comerciais que não estejam explicitamente publicados.
+- Para orçamento, confirmação de cobertura ou definição de escopo, encaminhe o usuário aos canais oficiais de contato.
