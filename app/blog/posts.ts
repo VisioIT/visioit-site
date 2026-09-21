@@ -20,6 +20,56 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'atualizacoes-de-seguranca-sem-parar-a-empresa',
+    title: 'Atualizações de segurança: como corrigir sistemas sem parar a empresa',
+    excerpt: 'Um processo prático para priorizar, testar e instalar correções com menos risco para a operação.',
+    category: 'Segurança',
+    publishedAt: '2026-09-21',
+    updatedAt: '2026-09-21',
+    readingTime: '12 min de leitura',
+    image: '/blog-atualizacoes-seguranca-ti.jpg',
+    imageAlt: 'Profissional de TI acompanhando atualizações de segurança em computadores corporativos',
+    intro: 'Adiar atualizações deixa vulnerabilidades conhecidas abertas; instalar tudo sem planejamento pode interromper sistemas importantes. A gestão de correções, também chamada de patch management, cria um caminho entre esses dois extremos: conhecer o ambiente, avaliar a urgência, testar mudanças e comprovar que os equipamentos realmente foram atualizados.',
+    sections: [
+      {
+        title: 'Por que atualizar exige um processo',
+        paragraphs: ['Sistemas operacionais, navegadores, aplicativos, equipamentos de rede e plataformas em nuvem recebem correções continuamente. Algumas resolvem falhas funcionais; outras fecham caminhos que podem ser explorados para roubar credenciais, executar códigos ou interromper serviços.', 'O desafio não termina ao clicar em “atualizar”. Uma correção pode exigir reinicialização, espaço em disco, nova versão de um componente ou ajuste em uma integração antiga. Sem inventário, prioridade e janela de manutenção, a empresa alterna entre dois riscos: permanecer exposta ou provocar uma indisponibilidade evitável.'],
+      },
+      {
+        title: 'Comece sabendo o que precisa ser corrigido',
+        paragraphs: ['O inventário deve indicar equipamentos, versões, usuários, responsáveis e criticidade. Inclua servidores, estações, notebooks, celulares corporativos, firewalls, switches gerenciáveis, pontos de acesso, sistemas de gestão, navegadores e ferramentas que abrem documentos ou acessam a internet.', 'Não dependa apenas da lembrança de cada usuário. Sempre que possível, use gerenciamento centralizado para identificar versões e acompanhar a instalação. Ativos que não aparecem no painel precisam ser investigados: podem estar desligados, fora da rede, sem agente de gestão ou já não pertencer à empresa.'],
+        bullets: ['Sistema operacional e versão instalada', 'Aplicações críticas e seus componentes', 'Equipamentos de rede e versões de firmware', 'Ativos que não recebem mais suporte do fabricante', 'Responsável, localização e impacto de uma parada'],
+      },
+      {
+        title: 'Priorize pelo risco, não apenas pela data',
+        paragraphs: ['Nem toda atualização tem a mesma urgência. Considere a gravidade da falha, a possibilidade de exploração, a exposição do equipamento e o impacto para o negócio. Uma vulnerabilidade ativa em um serviço acessível pela internet pode exigir ação imediata; uma correção de baixa gravidade em um equipamento isolado pode entrar no próximo ciclo planejado.', 'Também verifique se existem medidas temporárias, como desativar uma função vulnerável, restringir acesso ou bloquear um protocolo. Essas ações não substituem a correção definitiva, mas podem reduzir o risco enquanto o teste e a implantação são preparados.'],
+        bullets: ['Há exploração conhecida ou sinais de ataque?', 'O ativo pode ser acessado pela internet ou por terceiros?', 'A falha permite acesso a dados ou privilégios elevados?', 'O equipamento sustenta um processo crítico?', 'Existe correção disponível e compatível?'],
+      },
+      {
+        title: 'Teste com um grupo representativo',
+        paragraphs: ['Antes da distribuição ampla, aplique a correção em um conjunto pequeno de equipamentos que represente o ambiente real. Inclua modelos, versões e perfis diferentes. O objetivo é descobrir incompatibilidades sem atingir toda a empresa ao mesmo tempo.', 'Defina o que precisa ser verificado depois da instalação: inicialização, acesso à rede, impressão, VPN, sistema de gestão, arquivos compartilhados e integrações específicas. O teste deve ter duração compatível com o risco. Correções críticas podem exigir uma janela curta e monitoramento mais intenso; mudanças extensas merecem validação mais longa.'],
+      },
+      {
+        title: 'Organize janelas e comunicação',
+        paragraphs: ['Crie um calendário recorrente para atualizações comuns e um procedimento separado para emergências. Informe os usuários sobre horário, duração esperada, necessidade de salvar o trabalho e possíveis reinicializações. Uma mensagem curta e previsível reduz adiamentos e chamados desnecessários.', 'Servidores e equipamentos centrais exigem sequência planejada. Confirme backup ou ponto de recuperação, dependências, acesso administrativo, contatos de suporte e critério para interromper a implantação. Quando houver redundância, atualize um componente por vez e verifique o serviço antes de avançar.'],
+        bullets: ['Responsável pela execução e pela aprovação', 'Equipamentos e serviços incluídos', 'Horário de início e prazo máximo', 'Verificações antes e depois da mudança', 'Plano de retorno e contatos de escalonamento'],
+      },
+      {
+        title: 'Tenha um plano de retorno realista',
+        paragraphs: ['Nem toda atualização pode ser removida facilmente. Por isso, o plano de retorno precisa considerar o tipo de ativo. Em uma estação, pode ser possível desinstalar o pacote ou restaurar uma imagem. Em um servidor ou equipamento de rede, talvez seja necessário recuperar configuração, snapshot ou versão anterior do firmware.', 'Antes de começar, confirme se a cópia existe, se está acessível e quanto tempo a recuperação levaria. Registre o ponto em que a mudança deve ser interrompida. Continuar instalando correções enquanto sintomas se acumulam torna o diagnóstico mais difícil e amplia o impacto.'],
+      },
+      {
+        title: 'Comprove a instalação e trate exceções',
+        paragraphs: ['Uma tarefa marcada como enviada não significa que a correção foi aplicada. Verifique versão, estado de reinicialização e resultado em cada ativo. Equipamentos que falharam, estavam desligados ou ficaram fora da rede devem formar uma fila de exceções com responsável e prazo.', 'Acompanhe indicadores simples: percentual atualizado, tempo médio entre liberação e instalação, falhas por pacote e quantidade de ativos sem suporte. Esses dados revelam gargalos e ajudam a justificar modernização, automação ou substituição de sistemas antigos.'],
+        bullets: ['Confirme a versão depois da reinicialização', 'Investigue falhas repetidas em vez de apenas reenviar', 'Defina prazo e compensação para exceções', 'Remova do ambiente ativos abandonados ou desconhecidos', 'Guarde evidências das atualizações críticas'],
+      },
+      {
+        title: 'Transforme atualização em rotina de segurança',
+        paragraphs: ['Uma rotina sustentável combina monitoramento contínuo, ciclos regulares e capacidade de resposta rápida. Defina quem acompanha avisos, quem aprova paradas e quem confirma o resultado. Documente poucas etapas claras e adapte a frequência à criticidade do ambiente.', 'Comece pelos ativos expostos, contas administrativas, navegadores, ferramentas de acesso remoto e sistemas que armazenam dados importantes. Depois, amplie a cobertura. O objetivo não é instalar todas as versões no primeiro minuto, mas reduzir de forma previsível o tempo em que a empresa permanece exposta sem trocar segurança por instabilidade.'],
+      },
+    ],
+  },
+  {
     slug: 'inventario-de-ativos-de-ti-para-empresas',
     title: 'Inventário de ativos de TI: como organizar equipamentos, licenças e riscos',
     excerpt: 'Um método prático para saber o que a empresa possui, quem utiliza, quanto custa e o que precisa ser renovado.',
