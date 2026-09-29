@@ -20,6 +20,56 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'segundo-link-de-internet-e-redundancia-para-empresas',
+    title: 'Segundo link de internet: como criar redundância sem falsa segurança',
+    excerpt: 'Como escolher, configurar e testar uma conexão de contingência que realmente mantenha a empresa operando.',
+    category: 'Infraestrutura',
+    publishedAt: '2026-09-29',
+    updatedAt: '2026-09-29',
+    readingTime: '12 min de leitura',
+    image: '/blog-redundancia-internet-empresas.jpg',
+    imageAlt: 'Profissional de TI monitorando links redundantes de internet e equipamentos de rede corporativa',
+    intro: 'Um segundo link de internet pode reduzir o impacto de falhas, mas contratar duas conexões não garante continuidade. Se os serviços usam a mesma rota física, o mesmo equipamento ou uma troca manual demorada, um único incidente ainda pode interromper toda a empresa. A redundância precisa ser planejada, configurada e testada como parte da operação.',
+    sections: [
+      {
+        title: 'Comece pelo impacto de ficar sem internet',
+        paragraphs: ['Liste os processos que dependem da conexão: sistemas em nuvem, pagamentos, emissão fiscal, atendimento, telefonia, VPN, câmeras, integração com filiais e trabalho remoto. Para cada um, estime quanto tempo pode ficar indisponível e qual alternativa existe durante a falha.', 'Essa análise define o investimento necessário. Uma empresa que usa a internet apenas para navegação tem uma necessidade diferente de uma operação com ERP em nuvem, telefonia IP e vendas online. O objetivo não é comprar a maior velocidade, mas manter os serviços prioritários dentro de um nível aceitável.'],
+        bullets: ['Quais atividades param imediatamente?', 'Quanto custa uma hora de indisponibilidade?', 'Quais sistemas precisam continuar primeiro?', 'Existe procedimento temporário para trabalhar offline?', 'Quem deve ser avisado quando ocorre uma falha?'],
+      },
+      {
+        title: 'Diversifique além do nome da operadora',
+        paragraphs: ['Dois contratos com empresas diferentes podem compartilhar postes, dutos, fibras, centrais ou fornecedores de transporte. Uma obra, acidente ou falha elétrica no caminho comum pode derrubar ambos. Pergunte sobre rota de entrada, tecnologia de acesso e infraestrutura utilizada.', 'Sempre que possível, combine caminhos e meios distintos: fibra por entradas físicas separadas, rádio, cabo ou conexão móvel como contingência. A alternativa precisa ser adequada ao volume essencial. Um link móvel pode manter mensagens e pagamentos, mas talvez não suporte videoconferências, backups e dezenas de usuários ao mesmo tempo.'],
+      },
+      {
+        title: 'Elimine os pontos únicos de falha internos',
+        paragraphs: ['A redundância externa perde valor quando os dois links terminam no mesmo equipamento sem proteção elétrica, em uma única tomada ou em cabeamento improvisado. Verifique firewall, fontes, nobreak, switches centrais e o caminho até os usuários.', 'Nem toda empresa precisa duplicar toda a rede. Priorize os componentes cujo defeito derrubaria as duas conexões. Mantenha configurações protegidas por backup, equipamento de reposição quando o prazo de substituição for alto e contatos de suporte acessíveis mesmo sem internet.'],
+        bullets: ['Firewall ou roteador que recebe os dois links', 'Energia, nobreak e proteção contra surtos', 'Switch central e enlaces entre salas', 'Cabeamento e identificação das portas WAN', 'Configuração de contingência e credenciais administrativas'],
+      },
+      {
+        title: 'Automatize a troca com critérios corretos',
+        paragraphs: ['O firewall pode monitorar os links e realizar failover, transferindo o tráfego para a conexão disponível. A verificação não deve considerar apenas se o cabo está conectado. É preciso testar destinos externos confiáveis e detectar perda de pacotes, latência elevada ou ausência real de navegação.', 'Defina tempo e quantidade de falhas antes da troca para evitar alternâncias constantes durante pequenas oscilações. Configure também o retorno ao link principal de forma controlada. Algumas aplicações mantêm sessões associadas ao endereço público e podem exigir nova autenticação quando o caminho muda.'],
+      },
+      {
+        title: 'Decida o que passa pelo link de contingência',
+        paragraphs: ['Se a conexão secundária tem menos capacidade, aplique prioridades. Sistemas essenciais, pagamentos, comunicação e acesso remoto podem ter precedência sobre streaming, atualizações volumosas, sincronizações e backups. Sem essa política, atividades não críticas podem consumir a banda justamente durante a emergência.', 'Mapeie também serviços que dependem de endereço IP fixo, regras de firewall ou liberação por terceiros. VPNs entre unidades, câmeras e sistemas bancários podem precisar de configuração específica nos dois links. A contingência deve ser preparada antes da falha, não durante ela.'],
+        bullets: ['Defina aplicações críticas e não críticas', 'Limite transferências e atualizações durante a contingência', 'Configure VPN e acesso remoto para os dois caminhos', 'Revise dependências de IP público e listas de liberação', 'Proteja o link alternativo com as mesmas regras de segurança'],
+      },
+      {
+        title: 'Monitore qualidade, consumo e disponibilidade',
+        paragraphs: ['Um link pode permanecer conectado e ainda entregar uma experiência ruim. Acompanhe latência, perda de pacotes, variação de atraso, uso de banda e eventos de troca. Esses dados ajudam a diferenciar falha da operadora, saturação interna e problema de equipamento.', 'Registre chamados e compare o desempenho com o nível de serviço contratado. Alertas devem chegar por um caminho independente sempre que possível, pois uma notificação por e-mail pode não sair justamente quando a internet principal falha.'],
+      },
+      {
+        title: 'Teste a redundância de forma programada',
+        paragraphs: ['A primeira troca não pode acontecer em uma emergência real. Em uma janela combinada, desconecte ou desative o link principal e confirme quanto tempo o ambiente leva para migrar. Teste navegação, sistema de gestão, pagamentos, telefonia, VPN e acesso a serviços externos importantes.', 'Depois, restaure o link principal e valide o retorno. Documente tempo, sintomas e ajustes necessários. Repita o exercício depois de mudanças relevantes e em ciclos definidos, porque equipamentos, contratos e aplicações evoluem.'],
+        bullets: ['Confirme que a falha é detectada automaticamente', 'Meça o tempo até os serviços voltarem', 'Valide aplicações e não apenas a navegação', 'Teste o retorno ao link principal', 'Atualize contatos e procedimentos após o exercício'],
+      },
+      {
+        title: 'Transforme os dois links em continuidade real',
+        paragraphs: ['Uma arquitetura confiável combina diversidade de operadora e rota, equipamento adequado, energia protegida, políticas de tráfego, monitoramento e testes. O contrato adicional é somente uma parte do resultado.', 'Comece pelos processos que não podem parar e desenhe a contingência ao redor deles. Quando a empresa conhece suas dependências e pratica a troca, a falha deixa de ser uma corrida improvisada e passa a ser um evento previsto, com impacto limitado e responsáveis definidos.'],
+      },
+    ],
+  },
+  {
     slug: 'atualizacoes-de-seguranca-sem-parar-a-empresa',
     title: 'Atualizações de segurança: como corrigir sistemas sem parar a empresa',
     excerpt: 'Um processo prático para priorizar, testar e instalar correções com menos risco para a operação.',
