@@ -20,6 +20,60 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'acessos-de-ti-na-entrada-mudanca-e-saida-de-colaboradores',
+    title: 'Entrada e desligamento de colaboradores: como controlar acessos de TI',
+    excerpt: 'Um processo prático para conceder, revisar e remover acessos sem criar riscos ou atrasar o trabalho.',
+    category: 'Segurança',
+    publishedAt: '2026-10-05',
+    updatedAt: '2026-10-05',
+    readingTime: '12 min de leitura',
+    image: '/blog-acessos-colaboradores-ti.jpg',
+    imageAlt: 'Profissionais de TI e recursos humanos conferindo notebook, celular e crachá durante controle de acessos',
+    intro: 'A entrada, a mudança de função e o desligamento de uma pessoa alteram equipamentos, contas e permissões em vários sistemas. Quando Recursos Humanos, liderança e TI trabalham sem um processo comum, novos colaboradores esperam para começar e acessos antigos permanecem ativos além do necessário. Um fluxo simples reduz os dois problemas.',
+    sections: [
+      {
+        title: 'Trate o ciclo completo, não apenas o desligamento',
+        paragraphs: ['O controle começa antes do primeiro dia. A empresa precisa saber quais recursos cada função utiliza, quem aprova o acesso e quais equipamentos devem estar disponíveis. Durante a permanência, promoções, transferências e afastamentos também mudam o que a pessoa pode consultar ou alterar.', 'O desligamento é a etapa mais visível porque exige rapidez, mas ele só funciona bem quando contas, ativos e responsáveis já estão registrados. Sem inventário e identidade individual, a equipe precisa procurar acessos em diferentes plataformas enquanto o risco continua aberto.'],
+      },
+      {
+        title: 'Defina responsáveis e um gatilho oficial',
+        paragraphs: ['Recursos Humanos informa datas e situação do vínculo; a liderança define a necessidade do cargo; TI executa e registra as mudanças. Para terceiros, temporários e prestadores, o gestor do contrato deve cumprir o papel de responsável e informar o encerramento da atividade.', 'Use uma solicitação oficial com prazo, aprovador e informações mínimas. Mensagens isoladas e pedidos verbais se perdem, principalmente quando a mudança acontece fora do horário comum. O processo também deve prever desligamentos imediatos e indisponibilidade de algum responsável.'],
+        bullets: ['Nome, função, setor e gestor responsável', 'Data e horário de início ou encerramento', 'Sistemas, grupos e pastas necessários', 'Equipamentos e acessórios envolvidos', 'Aprovadores e responsáveis pela execução', 'Tratamento de dados, arquivos e mensagens'],
+      },
+      {
+        title: 'Conceda acesso por função e pelo menor privilégio',
+        paragraphs: ['Crie perfis básicos para funções recorrentes, como financeiro, comercial ou operação. O perfil acelera a entrada e reduz escolhas improvisadas. Exceções devem indicar motivo, aprovador e prazo de revisão.', 'Cada pessoa deve receber conta própria. Contas compartilhadas dificultam auditoria, troca de senha e remoção individual. Privilégios administrativos precisam ser separados do uso cotidiano e concedidos somente quando a atividade exige.'],
+        bullets: ['E-mail e identidade corporativa', 'Sistemas de gestão e plataformas em nuvem', 'Pastas, grupos e canais de colaboração', 'VPN, acesso remoto e rede sem fio', 'Aplicações financeiras e painéis administrativos', 'Acesso físico, alarmes e ambientes restritos'],
+      },
+      {
+        title: 'Prepare equipamentos antes do primeiro dia',
+        paragraphs: ['Notebook, celular, monitor, carregador e demais itens devem estar registrados e associados ao usuário. A configuração precisa incluir atualizações, criptografia, proteção, bloqueio de tela e ferramentas corporativas. Entregar um equipamento sem padrão transfere o trabalho para o novo colaborador e abre espaço para configurações inseguras.', 'No primeiro acesso, oriente sobre MFA, gerenciador de senhas, armazenamento de arquivos, suporte e comunicação de incidentes. Uma explicação curta e prática evita que a pessoa crie atalhos fora dos canais oficiais.'],
+      },
+      {
+        title: 'Revise acessos quando a função muda',
+        paragraphs: ['Promoções e transferências costumam adicionar permissões, mas raramente removem as antigas. Esse acúmulo cria acessos incompatíveis com a atividade atual e amplia o impacto de uma conta comprometida.', 'A mudança de função deve gerar uma comparação entre o perfil anterior e o novo. Remova grupos e privilégios que perderam justificativa, transfira responsabilidades e defina um período curto de transição apenas quando necessário. Depois, confirme com o gestor que o acesso temporário pode ser encerrado.'],
+      },
+      {
+        title: 'Planeje o desligamento com ordem e horário definidos',
+        paragraphs: ['A desativação deve ocorrer no momento combinado com Recursos Humanos e liderança. Comece pela identidade central e pelos meios que permitem redefinir outras contas, como e-mail, MFA e gerenciador de senhas. Em seguida, encerre sessões, VPN, sistemas, nuvem e acessos físicos.', 'Não apague imediatamente arquivos ou caixa postal. Defina retenção, transferência de propriedade e responsável pelas informações. Redirecionamentos e respostas automáticas devem ter prazo e finalidade, evitando exposição desnecessária de mensagens.'],
+        bullets: ['Bloquear identidade, e-mail e sessões ativas', 'Revogar MFA, VPN, tokens e chaves de acesso', 'Remover grupos, sistemas e plataformas externas', 'Trocar segredos compartilhados que não puderam ser individualizados', 'Transferir arquivos, agendas e automações', 'Recolher equipamentos, crachá, chaves e acessórios'],
+      },
+      {
+        title: 'Inclua serviços que não são administrados pela TI',
+        paragraphs: ['Marketing, vendas, engenharia e financeiro podem contratar plataformas diretamente. Redes sociais, hospedagem, anúncios, assinatura eletrônica, bancos e portais de fornecedores também precisam entrar no processo.', 'Mantenha um catálogo de serviços com proprietário do negócio e administrador técnico. Revise despesas e caixas de e-mail para localizar ferramentas esquecidas. Quando possível, use login corporativo centralizado e evite cadastrar serviços críticos em endereços pessoais.'],
+      },
+      {
+        title: 'Registre evidências e verifique o resultado',
+        paragraphs: ['Um checklist marcado como concluído deve apontar quem executou, quando e em qual sistema. Para desligamentos sensíveis, uma segunda pessoa pode validar itens críticos. A confirmação reduz erros e cria evidência para auditoria e investigação.', 'Acompanhe contas sem uso, licenças atribuídas a pessoas inativas, equipamentos não devolvidos e solicitações atrasadas. Revisões periódicas com os gestores ajudam a encontrar mudanças que não passaram pelo fluxo oficial.'],
+        bullets: ['Tempo entre a solicitação e a conclusão', 'Contas ativas sem vínculo confirmado', 'Exceções vencidas ou sem aprovador', 'Ativos pendentes de devolução', 'Licenças recuperadas e acessos removidos'],
+      },
+      {
+        title: 'Comece com um fluxo simples e repetível',
+        paragraphs: ['Mapeie primeiro os sistemas mais importantes, defina um formulário único e crie checklists para entrada, mudança e saída. Estabeleça prazos diferentes para solicitações comuns e desligamentos imediatos. Depois, integre automações onde o volume justificar.', 'O processo funciona quando ninguém precisa adivinhar quem deve agir. Com responsabilidades claras, perfis por função e registros confiáveis, a empresa recebe melhor quem chega, adapta acessos sem acúmulo e encerra vínculos com segurança.'],
+      },
+    ],
+  },
+  {
     slug: 'segundo-link-de-internet-e-redundancia-para-empresas',
     title: 'Segundo link de internet: como criar redundância sem falsa segurança',
     excerpt: 'Como escolher, configurar e testar uma conexão de contingência que realmente mantenha a empresa operando.',
