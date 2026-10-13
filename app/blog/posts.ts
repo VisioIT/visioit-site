@@ -20,6 +20,60 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'como-organizar-chamados-e-prioridades-de-suporte-de-ti',
+    title: 'Chamados de TI: como organizar prioridades e melhorar o atendimento',
+    excerpt: 'Um método prático para registrar solicitações, definir urgência e reduzir interrupções sem transformar tudo em emergência.',
+    category: 'Gestão de TI',
+    publishedAt: '2026-10-13',
+    updatedAt: '2026-10-13',
+    readingTime: '12 min de leitura',
+    image: '/blog-chamados-suporte-ti.jpg',
+    imageAlt: 'Equipe de suporte de TI analisando fila de chamados, prioridades e indicadores de atendimento',
+    intro: 'Quando pedidos chegam por mensagens, ligações e conversas de corredor, a equipe de TI perde contexto, repete perguntas e atende primeiro quem insiste mais. Um processo de chamados cria uma fila visível, registra o impacto e permite priorizar pelo negócio. O objetivo não é aumentar a burocracia, mas reduzir o tempo entre o problema e a solução.',
+    sections: [
+      {
+        title: 'Centralize as solicitações em um canal oficial',
+        paragraphs: ['Defina onde os usuários devem pedir ajuda: portal, e-mail integrado à ferramenta ou outro canal que transforme cada solicitação em registro. Conversas rápidas ainda podem acontecer, mas o chamado precisa existir para que o trabalho não dependa da memória de quem recebeu a mensagem.', 'O registro cria histórico, permite acompanhar responsáveis e mostra padrões recorrentes. Ele também protege o usuário: a solicitação deixa de ficar presa em uma conversa privada e pode ser assumida por outra pessoa quando o técnico inicial não está disponível.'],
+        bullets: ['Número e data do chamado', 'Solicitante, setor e contato', 'Equipamento, sistema ou serviço afetado', 'Descrição do sintoma e momento em que começou', 'Impacto percebido no trabalho', 'Responsável, atualizações e solução aplicada'],
+      },
+      {
+        title: 'Peça informações que aceleram o diagnóstico',
+        paragraphs: ['Formulários extensos afastam os usuários, mas campos vagos geram várias rodadas de perguntas. Solicite o mínimo necessário: o que a pessoa tentava fazer, o que aconteceu, quando começou, quem mais foi afetado e se existe mensagem de erro.', 'Imagens podem ajudar, desde que não exponham senhas, dados pessoais ou informações confidenciais. Oriente o usuário a copiar mensagens completas e informar mudanças recentes, como atualização, troca de equipamento ou acesso por outro local.'],
+      },
+      {
+        title: 'Separe impacto de urgência',
+        paragraphs: ['Impacto indica quantas pessoas, processos ou clientes foram afetados. Urgência representa quanto tempo a empresa pode esperar antes que a consequência aumente. A prioridade nasce da combinação desses dois fatores, não apenas da ansiedade de quem solicita.', 'Um computador com defeito pode ser prioridade moderada se existe equipamento reserva. Já uma falha no faturamento perto de um prazo legal pode exigir resposta rápida mesmo afetando poucas pessoas. Defina exemplos próximos da realidade da empresa para reduzir discussões.'],
+        bullets: ['Crítica: operação essencial parada, risco elevado ou muitos usuários afetados', 'Alta: processo importante comprometido e sem alternativa adequada', 'Normal: impacto limitado, com solução temporária ou prazo tolerável', 'Baixa: dúvida, melhoria ou solicitação planejável sem interrupção'],
+      },
+      {
+        title: 'Diferencie incidente, solicitação e mudança',
+        paragraphs: ['Incidente é uma interrupção ou degradação inesperada, como sistema fora do ar ou equipamento que não inicia. Solicitação é uma necessidade comum, como instalar um programa aprovado ou criar um acesso. Mudança altera o ambiente e pode exigir análise, teste e janela de execução.', 'Misturar essas categorias distorce indicadores e expectativas. Uma compra de notebook ou projeto de rede não deve competir na mesma fila de uma indisponibilidade. Cada tipo pode ter fluxo, aprovador e prazo apropriados.'],
+      },
+      {
+        title: 'Defina prazos que a equipe consegue cumprir',
+        paragraphs: ['Um acordo de nível de serviço deve esclarecer tempo para primeira resposta, frequência de comunicação e meta de solução. A primeira resposta confirma o recebimento e inicia o diagnóstico; ela não significa que o problema já estará resolvido.', 'Considere horário de atendimento, dependências de fornecedores, disponibilidade de peças e necessidade de acesso ao usuário. Prometer o mesmo prazo para qualquer situação cria frustração e incentiva classificações artificiais como urgentes. Revise as metas usando dados reais.'],
+        bullets: ['Horário em que o prazo é contado', 'Meta de primeira resposta por prioridade', 'Frequência das atualizações de andamento', 'Situações em que o prazo fica aguardando usuário ou fornecedor', 'Critérios de escalonamento e comunicação'],
+      },
+      {
+        title: 'Comunique andamento sem linguagem técnica excessiva',
+        paragraphs: ['O usuário precisa saber o que foi entendido, qual impacto está sendo tratado e quando receberá nova atualização. Frases genéricas como “estamos verificando” não criam confiança. Explique o próximo passo sem expor detalhes desnecessários ou prometer horários que ainda não podem ser confirmados.', 'Em incidentes amplos, use uma comunicação coletiva para evitar chamados duplicados. Informe o serviço afetado, o que os usuários devem fazer e o horário da próxima atualização. Depois da recuperação, confirme a normalização e registre a causa quando estiver disponível.'],
+      },
+      {
+        title: 'Resolva a causa dos chamados recorrentes',
+        paragraphs: ['A fila não deve servir apenas para apagar incêndios. Agrupe chamados por serviço, sintoma e equipamento. Repetições podem apontar Wi-Fi mal dimensionado, computadores no fim da vida útil, treinamento insuficiente, atualização problemática ou processo confuso.', 'Quando uma causa é identificada, registre uma ação preventiva com responsável e prazo. Uma pequena base de conhecimento também ajuda a equipe a repetir soluções seguras e permite que usuários resolvam dúvidas simples sem esperar atendimento.'],
+        bullets: ['Assuntos com maior volume', 'Incidentes que mais consomem horas', 'Equipamentos com falhas repetidas', 'Chamados reabertos ou transferidos várias vezes', 'Soluções temporárias que nunca viraram correção definitiva'],
+      },
+      {
+        title: 'Acompanhe indicadores que levem a decisões',
+        paragraphs: ['Quantidade de chamados isolada não mede qualidade. Observe tempo de primeira resposta, tempo de solução por prioridade, cumprimento das metas, reabertura, satisfação e idade dos itens pendentes. Compare períodos e setores para localizar gargalos.', 'Indicadores devem orientar capacidade, renovação de ativos, treinamento e melhorias. Evite premiar apenas velocidade: encerrar chamados cedo demais reduz o número no painel, mas aumenta retrabalho e perda de confiança.'],
+      },
+      {
+        title: 'Comece pequeno e ajuste com a operação',
+        paragraphs: ['Escolha um canal, quatro níveis de prioridade, categorias simples e regras claras de comunicação. Treine usuários e equipe com exemplos práticos. Nas primeiras semanas, revise classificações e prazos para corrigir o que não representa a rotina.', 'Um bom atendimento de TI combina processo e proximidade. A ferramenta organiza a fila, mas a qualidade aparece quando a equipe entende o impacto, comunica com clareza e transforma o histórico em prevenção.'],
+      },
+    ],
+  },
+  {
     slug: 'acessos-de-ti-na-entrada-mudanca-e-saida-de-colaboradores',
     title: 'Entrada e desligamento de colaboradores: como controlar acessos de TI',
     excerpt: 'Um processo prático para conceder, revisar e remover acessos sem criar riscos ou atrasar o trabalho.',
